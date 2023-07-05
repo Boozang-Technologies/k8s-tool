@@ -27,7 +27,7 @@ To install and run the Kubernetes Management Tool locally, follow these steps:
 2. Navigate to the project directory: `cd k8s-tool`
 3. Install dependencies using npm: `npm install`
 4. Start tool: `npm start`
-5. Open your browser and navigate to `http://localhost:3000` to access the tool's web interface.
+5. Open your browser and navigate to `http://localhost:8000` to access the tool's web interface.
 
 ## Configuration
 
