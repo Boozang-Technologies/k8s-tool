@@ -1,8 +1,6 @@
-# k8s-tool
-
 # Kubernetes Management Tool (NodeJS)
 
-![Logo](./logo.png)
+![Logo](./docs/logo.png)
 
 The Kubernetes Management Tool is a powerful and user-friendly application built in NodeJS that simplifies the management and monitoring of Kubernetes clusters. With this tool, you can efficiently handle the deployment, scaling, and monitoring of your applications running on Kubernetes.
 
@@ -60,7 +58,3 @@ We would like to thank the following open-source projects for their contribution
 
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com
-
-
-
-
