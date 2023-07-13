@@ -27,7 +27,7 @@ const _podDetailsViewDef={
                 '<button class="btn btn-icon bz-star on" style="cursor:default;"></button>',
                 '<header>_k8sMessage._common._favor</header>',
                 `<button _if='k8s._uiSwitch._showFavorFile' onclick='k8s._uiSwitch._showFavorFile=0' class='btn btn-icon bz-none-border bz-right-space-5 bz-pod'></button>`,
-                `<button onclick='k8s._uiSwitch._curPodDetails=0' class='btn btn-icon bz-none-border bz-close'></button>`
+                `<button onclick='_logHandler._switchToLog()' class='btn btn-icon bz-none-border bz-close'></button>`
               ]
             },
             {

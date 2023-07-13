@@ -30,17 +30,422 @@
     {
       "s": "achndlr",
       "p": "etc/../conf/cac-configs/cac-aca-conf/v0.0.5/ses.properties",
-      "fd": false
+      "fd": false,
+      "_pod": {
+        "_name": "cac-nls-lstnrs-eric-tmo-des-ms-achndlr-74bcc755cb-79l2f",
+        "_ready": true,
+        "_status": "Running",
+        "_age": "66m",
+        "_path": "etc/..",
+        "g": 1,
+        "gk": "achndlr",
+        "_alarmValue": {
+          "cpu": [
+            {
+              "_time": 1689206247110,
+              "_value": 24,
+              "_percentage": 4
+            },
+            {
+              "_time": 1689206320296,
+              "_value": 73,
+              "_percentage": 14,
+              "_increase": 49,
+              "_increasePercentage": 9.8
+            },
+            {
+              "_time": 1689206388513,
+              "_value": 29,
+              "_percentage": 5,
+              "_increase": -44,
+              "_increasePercentage": -8.8
+            },
+            {
+              "_time": 1689206456851,
+              "_value": 33,
+              "_percentage": 6,
+              "_increase": 4,
+              "_increasePercentage": 0.8
+            },
+            {
+              "_time": 1689206524912,
+              "_value": 44,
+              "_percentage": 8,
+              "_increase": 11,
+              "_increasePercentage": 2.2
+            },
+            {
+              "_time": 1689206593224,
+              "_value": 33,
+              "_percentage": 6,
+              "_increase": -11,
+              "_increasePercentage": -2.2
+            },
+            {
+              "_time": 1689206661610,
+              "_value": 24,
+              "_percentage": 4,
+              "_increase": -9,
+              "_increasePercentage": -1.8
+            },
+            {
+              "_time": 1689206730612,
+              "_value": 32,
+              "_percentage": 6,
+              "_increase": 8,
+              "_increasePercentage": 1.6
+            },
+            {
+              "_time": 1689206798833,
+              "_value": 68,
+              "_percentage": 13,
+              "_increase": 36,
+              "_increasePercentage": 7.2
+            },
+            {
+              "_time": 1689206867264,
+              "_value": 29,
+              "_percentage": 5,
+              "_increase": -39,
+              "_increasePercentage": -7.8
+            },
+            {
+              "_time": 1689206935607,
+              "_value": 39,
+              "_percentage": 7,
+              "_increase": 10,
+              "_increasePercentage": 2
+            },
+            {
+              "_time": 1689207003836,
+              "_value": 26,
+              "_percentage": 5,
+              "_increase": -13,
+              "_increasePercentage": -2.6
+            },
+            {
+              "_time": 1689207077082,
+              "_value": 35,
+              "_percentage": 7,
+              "_increase": 9,
+              "_increasePercentage": 1.8
+            },
+            {
+              "_time": 1689207145619,
+              "_value": 27
+            }
+          ],
+          "memory": [
+            {
+              "_time": 1689206247110,
+              "_value": 456,
+              "_percentage": 22
+            },
+            {
+              "_time": 1689206320296,
+              "_value": 459,
+              "_percentage": 22,
+              "_increase": 3,
+              "_increasePercentage": 0.1
+            },
+            {
+              "_time": 1689206388513,
+              "_value": 459,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206456851,
+              "_value": 458,
+              "_percentage": 22,
+              "_increase": -1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206524912,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 2,
+              "_increasePercentage": 0.1
+            },
+            {
+              "_time": 1689206593224,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206661610,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206730612,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206798833,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206867264,
+              "_value": 461,
+              "_percentage": 22,
+              "_increase": 1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206935607,
+              "_value": 463,
+              "_percentage": 22,
+              "_increase": 2,
+              "_increasePercentage": 0.1
+            },
+            {
+              "_time": 1689207003836,
+              "_value": 463,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689207077082,
+              "_value": 464,
+              "_percentage": 22,
+              "_increase": 1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689207145619,
+              "_value": 464
+            }
+          ],
+          "space": []
+        }
+      },
+      "_name": "ses.properties",
+      "_loading": 0,
+      "_content": "#SES properties\ntmoes.ses.http=http\ntmoes.ses.host=eric-tmo-des-iam-sim.default.svc.cluster.local\ntmoes.ses.port=8000\ntmoes.ses.connection.timeout=8000\n\n#max no of connections in pool\ntmoes.ses.http.connection.pool=200\n\n#Update following values if Retry is required for SES call.\n#retry timeout in milli seconds\ntmoes.ses.http.retry.timeout=8000\n#Maximum number of retries for one request\ntmoes.ses.http.no.of.retry.times=5\n#Retry interval in milli seconds\ntmoes.ses.http.retry.interval=2000\n#retry the request if below http response status code returned from HttpResponse, separated by comma(,) as 500,503\ntmoes.ses.retry.http.status=500,503,504\n\n#SES CC Disable service by primary msisdn/imsi\ntmoes.ses.disable.service.url=ses/customercare/v2/services\n\n#SES CC Deactivate Service Subscription by Secondary MSISDN\ntmoes.ses.disable.servicefor2ndimsi.url=ses/customercare/v2/esimSubscription\n\n#SES CC API Delete Device Profile url\ntmoes.ses.delete.device.profile.url=ses/customercare/v2/devices\n\n#SES Update Paired Primary Device IMSI - BR192\ntmoes.ses.update.paired.primary.device.imsi=ses/customercare/v2/updatePairedPrimaryDeviceImsi\n\n#SES Update Paired Primary Device MSISDN - BR192\ntmoes.ses.update.paired.primary.device.msisdn=ses/customercare/v2/updatePairedPrimaryDeviceMsisdn\n\ntmoes.ses.msisdn.country.code=1\n\n# Authentication\n#tmoes.ses.authentication.username=ACA_CC\n#tmoes.ses.authentication.password=ACA_pwd01\ntmoes.ses.authentication.username=admin\ntmoes.ses.authentication.password=password\n\n#Additional Info for Events\n#format is ses.<EventType>\nses.CHANGE_IMSI={additionalInfo: {externalEvent:NAP_CHANGE_IMSI, source:AccountChangeEventAdapter}}\nses.CHANGE_MSISDN={additionalInfo: {externalEvent:NAP_CHANGE_MSISDN, source:AccountChangeEventAdapter}}\nses.DELETE_ACCOUNT={additionalInfo: {externalEvent:NAP_DELETE_ACCOUNT, source:AccountChangeEventAdapter}}\nses.SUSPEND_MSISDN={additionalInfo: {externalEvent:NAP_SUSPEND_ACCOUNT, source:AccountChangeEventAdapter}}\nses.CANCEL_MSISDN={additionalInfo: {externalEvent:NAP_CANCEL_ACCOUNT, source:AccountChangeEventAdapter}}\nses.CHANGE_FEATURE={additionalInfo: {externalEvent:NAP_CHANGE_FEATURE, source:AccountChangeEventAdapter}}\n\nses.CHANGE_IMSI.delete.nativeVowifi.flag=false\nses.CHANGE_MSISDN.delete.nativeVowifi.flag=false\nses.DELETE_ACCOUNT.delete.nativeVowifi.flag=false\nses.SUSPEND_MSISDN.delete.nativeVowifi.flag=false\nses.CANCEL_MSISDN.delete.nativeVowifi.flag=false\nses.CHANGE_FEATURE.delete.nativeVowifi.flag=false\n\n#Query param \"applicationCategory\" value for SES CC Delete Service API\n#format is ses.<EventType>.delete.application.category , values seperated by ,\nses.CHANGE_IMSI.delete.application.category=\nses.CHANGE_MSISDN.delete.application.category=\nses.DELETE_ACCOUNT.delete.application.category=\nses.SUSPEND_MSISDN.delete.application.category=\nses.CANCEL_MSISDN.delete.application.category=\nses.CHANGE_FEATURE.delete.application.category=digits,cdigits\n\n#ignore ACA retry for below SES failure errorcodes\nses.errorcodes=21001,21002 \n\n#Additional parameter for BR192: flags to enable/disable functionalities of BR192\ntmoes.ses.enable.update.paired.imsi.flag=true\ntmoes.ses.enable.update.paired.msisdn.flag=true\n\n### BR228 DES20.2\n#IAM permission call configuration to call or not to call\ntmoes.iam.permission.enable.change.msisdn.flag=enable\ntmoes.iam.permission.enable.restore.msisdn.flag=enable\ntmoes.iam.permission.enable.suspend.msisdn.flag=enable\ntmoes.iam.permission.enable.delete.account.flag=enable\ntmoes.iam.permission.enable.cancel.msisdn.flag=enable\n\n#SES CC delete  API secondary ESIM configuration to call or not to call\ntmoes.delete.esim.secondary.enable.change.imsi.flag=enable\ntmoes.delete.esim.secondary.enable.change.msisdn.flag=disable\ntmoes.delete.esim.secondary.enable.suspend.msisdn.flag=disable\ntmoes.delete.esim.secondary.enable.delete.account.flag=enable\ntmoes.delete.esim.secondary.enable.cancel.msisdn.flag=enable\n\n#SES CC keep secondary subscription configuration\ntmoes.keep.secondary.sub.change.imsi.flag=true\ntmoes.keep.secondary.sub.change.msisdn.flag=true\ntmoes.keep.secondary.sub.suspend.msisdn.flag=true\ntmoes.keep.secondary.sub.delete.account.flag=true\ntmoes.keep.secondary.sub.cancel.msisdn.flag=true\n\n#SES CC EAP AKA token invalidate configuration\ntmoes.eap.aka.token.invalidate.change.imsi.flag=true\ntmoes.eap.aka.token.invalidate.change.msisdn.flag=true\ntmoes.eap.aka.token.invalidate.suspend.msisdn.flag=true\ntmoes.eap.aka.token.invalidate.delete.account.flag=true\ntmoes.eap.aka.token.invalidate.cancel.msisdn.flag=true\n\n#SES CC send push notification configuration\ntmoes.send.push.notification.change.imsi.flag=false\ntmoes.send.push.notification.change.msisdn.flag=false\ntmoes.send.push.notification.suspend.msisdn.flag=false\ntmoes.send.push.notification.delete.account.flag=false\ntmoes.send.push.notification.cancel.msisdn.flag=false\n\n#SES CC parameter name for keep secondary subscription\ntmoes.keep.secondary.sub.param.name=keepSharedModeEsimSub\n\n#SES CC parameter name for EAP AKA token invalidate\ntmoes.eap.aka.token.invalidate.param.name=invalidateImsiEnabled\n\n#SES CC parameter name for Send Push notification\ntmoes.send.push.notification.param.name=triggerPushNotification\n\n#BR248\ntmoes.ses.update.secondary.msisdn.esimsub.url=ses/customercare/v2/esimSubscription/{secondaryMsisdn}\ntmoes.update.secondary.msisdn.esim.sub.enable.update.msisdn.flag=enable\n\n#SES allow or not allow to sim swap block list\ntmoes.ses.update.subtransfer.auth.status=api/subTransferAuth/v1/updateSubTransferAuthStatus\ntmoes.ses.query.subtransfer.auth.status=api/subTransferAuth/v1/querySubTransferAuthStatus\ntmoes.ses.update.make.number.allow=0\ntmoes.ses.update.make.number.notallow=1\ntmoes.ses.query.response.subtransferblocked.param=subTransferBlocked\n"
     },
     {
       "s": "achndlr",
       "p": "etc/../conf/cac-configs/cac-aca-conf/v0.0.5/permission_management.properties",
-      "fd": false
-    },
-    {
-      "s": "achndlr",
-      "p": "etc/../conf/cac-configs/cac-location-event-handler-conf/v0.0.3/SppAdapter.properties",
-      "fd": false
+      "fd": false,
+      "_pod": {
+        "_name": "cac-nls-lstnrs-eric-tmo-des-ms-achndlr-74bcc755cb-79l2f",
+        "_ready": true,
+        "_status": "Running",
+        "_age": "66m",
+        "_path": "etc/..",
+        "g": 1,
+        "gk": "achndlr",
+        "_alarmValue": {
+          "cpu": [
+            {
+              "_time": 1689206247110,
+              "_value": 24,
+              "_percentage": 4
+            },
+            {
+              "_time": 1689206320296,
+              "_value": 73,
+              "_percentage": 14,
+              "_increase": 49,
+              "_increasePercentage": 9.8
+            },
+            {
+              "_time": 1689206388513,
+              "_value": 29,
+              "_percentage": 5,
+              "_increase": -44,
+              "_increasePercentage": -8.8
+            },
+            {
+              "_time": 1689206456851,
+              "_value": 33,
+              "_percentage": 6,
+              "_increase": 4,
+              "_increasePercentage": 0.8
+            },
+            {
+              "_time": 1689206524912,
+              "_value": 44,
+              "_percentage": 8,
+              "_increase": 11,
+              "_increasePercentage": 2.2
+            },
+            {
+              "_time": 1689206593224,
+              "_value": 33,
+              "_percentage": 6,
+              "_increase": -11,
+              "_increasePercentage": -2.2
+            },
+            {
+              "_time": 1689206661610,
+              "_value": 24,
+              "_percentage": 4,
+              "_increase": -9,
+              "_increasePercentage": -1.8
+            },
+            {
+              "_time": 1689206730612,
+              "_value": 32,
+              "_percentage": 6,
+              "_increase": 8,
+              "_increasePercentage": 1.6
+            },
+            {
+              "_time": 1689206798833,
+              "_value": 68,
+              "_percentage": 13,
+              "_increase": 36,
+              "_increasePercentage": 7.2
+            },
+            {
+              "_time": 1689206867264,
+              "_value": 29,
+              "_percentage": 5,
+              "_increase": -39,
+              "_increasePercentage": -7.8
+            },
+            {
+              "_time": 1689206935607,
+              "_value": 39,
+              "_percentage": 7,
+              "_increase": 10,
+              "_increasePercentage": 2
+            },
+            {
+              "_time": 1689207003836,
+              "_value": 26,
+              "_percentage": 5,
+              "_increase": -13,
+              "_increasePercentage": -2.6
+            },
+            {
+              "_time": 1689207077082,
+              "_value": 35,
+              "_percentage": 7,
+              "_increase": 9,
+              "_increasePercentage": 1.8
+            },
+            {
+              "_time": 1689207145619,
+              "_value": 27
+            }
+          ],
+          "memory": [
+            {
+              "_time": 1689206247110,
+              "_value": 456,
+              "_percentage": 22
+            },
+            {
+              "_time": 1689206320296,
+              "_value": 459,
+              "_percentage": 22,
+              "_increase": 3,
+              "_increasePercentage": 0.1
+            },
+            {
+              "_time": 1689206388513,
+              "_value": 459,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206456851,
+              "_value": 458,
+              "_percentage": 22,
+              "_increase": -1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206524912,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 2,
+              "_increasePercentage": 0.1
+            },
+            {
+              "_time": 1689206593224,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206661610,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206730612,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206798833,
+              "_value": 460,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206867264,
+              "_value": 461,
+              "_percentage": 22,
+              "_increase": 1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689206935607,
+              "_value": 463,
+              "_percentage": 22,
+              "_increase": 2,
+              "_increasePercentage": 0.1
+            },
+            {
+              "_time": 1689207003836,
+              "_value": 463,
+              "_percentage": 22,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689207077082,
+              "_value": 464,
+              "_percentage": 22,
+              "_increase": 1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689207145619,
+              "_value": 464
+            }
+          ],
+          "space": []
+        }
+      },
+      "_name": "permission_management.properties",
+      "_loading": 0,
+      "_content": "#PermissionManagement properties\ntmoes.permision.protocol=http\n\ntmoes.permisson.host=eric-tmo-des-iam-sim.default.svc.cluster.local\n\ntmoes.permisson.port=8000\ntmoes.permission.connection.timeout=8000\ntmoes.permisson.update.msisdn.url= permission-management/v1/permissionmsisdn\ntmoes.permisson.update.state.url= permission-management/v1/permissionstate\ntmoes.revoke.permission.url= permission-management/v1/permissions"
     },
     {
       "s": "napfltr",
@@ -64,6 +469,10 @@
     {
       "s": "e911lstnr",
       "p": "etc/../config/application.yaml"
+    },
+    {
+      "s": "achndlr",
+      "p": "etc/../conf/cac-configs/cac-location-event-handler-conf/v0.0.4/SppAdapter.properties"
     }
   ],
   "autoForward": {
@@ -72,7 +481,7 @@
     "naplstnr": "8080:8080"
   },
   "filter": {
-    "mycac": "achndlr|napfltr|naplstnr|lochndlr|e911lstnr|nls-data-message-bus-kf|eric-pm-alert|eric-pm-server|profile|config|perm",
+    "mycac": "achndlr|napfltr|naplstnr|lochndlr|e911lstnr|nls-data-message-bus-kf|eric-pm-alert|eric-pm-server|profile|config|perm|query",
     "ms-testing": "kafka",
     "staging-umbrella-test": "achndlr|napfltr|naplstnr|lochndlr|e911lstnr|nls-data-message-bus-kf|eric-pm-alert|eric-pm-server|profile|config",
     "staging-umbrella-test1": "achndlr|napfltr|naplstnr|lochndlr|e911lstnr|nls-data-message-bus-kf|eric-pm-alert|eric-pm-server|profile|config|perm",
@@ -96,7 +505,9 @@
     "appdynamics": "",
     "deploy-code-sd-mana-tmo-adp-naplistener": "",
     "deploy-code-sd-mana-tmo-adp-napeventfilter": "",
-    "lws": ""
+    "lws": "",
+    "deploy-code-sd-mana-tmo-adp-accountchangeadapter": "",
+    "": ""
   },
   "alarms": {
     "ms-testing": [
@@ -176,7 +587,7 @@
       {
         "type": "memory",
         "content": "total",
-        "value": "95",
+        "value": "1",
         "scope": {
           "achndlr": "on",
           "napfltr": "on",
@@ -195,7 +606,7 @@
       }
     ]
   },
-  "NSFilter": "lws|mycac|testing|deploy|staging-umbrella-test",
+  "NSFilter": "default|mycac|testing|deploy|staging-umbrella-test",
   "log": {
     "cleanDynamicRegex": "([0-9 -:/.]{17,23}|@[0-9a-f]{7,32})|id [0-9]{1,10}| --- \\[[^\\]]+\\]",
     "highlights": [
@@ -216,11 +627,13 @@
       },
       {
         "css": "background-color:#CFC;color:#000;",
-        "value": "DLT message"
+        "value": "Thread waking up: restart listener container",
+        "enable": "on"
       },
       {
         "css": "background-color:yellow;color:#000;",
-        "value": "Listener receiving the Message End"
+        "value": "no response",
+        "enable": "on"
       },
       {
         "css": "background-color:#FFF;color:red;",
@@ -244,6 +657,13 @@
     {
       "name": "Check memory",
       "value": "http://10.63.133.234:9090/graph?g0.expr=jvm_memory_used_bytes%7Bapp_kubernetes_io_name%3D%22eric-tmo-des-ms-achndlr%22%2Carea%3D%22heap%22%2Cservice_istio_io_canonical_name%3D%22eric-tmo-des-ms-achndlr%22%7D&g0.tab=0&g0.stacked=0&g0.show_exemplars=0&g0.range_input=4h",
+      "podGroup": "bz-node-system",
+      "faver": true
+    },
+    {
+      "open": "on",
+      "value": "http://10.63.133.234:8585/#alarm-viewer",
+      "name": "Check alarm",
       "podGroup": "bz-node-system",
       "faver": true
     }
@@ -289,7 +709,8 @@
     {
       "name": "Install cac-nls-lstnrs",
       "value": "helm install cac-nls-lstnrs -f /home/elxneiw/deploy/ews_CAC_NLS_LSTNRS.yaml --namespace mycac /home/elxneiw/deploy/eric-tmo-cac-umbrella",
-      "podGroup": "bz-node-system"
+      "podGroup": "bz-node-system",
+      "open": false
     },
     {
       "name": "Check Resource",
@@ -313,7 +734,7 @@
     },
     {
       "name": "Install mycac & common components",
-      "value": "kubectl create namespace mycac\nkubectl get secret armdocker-pull-secret --namespace=default -oyaml | grep -vwE \"(namespace)\" | kubectl apply --namespace=mycac -f -\nkubectl create -f /home/elxneiw/deploy/rosetta.yaml --namespace mycac\n\nhelm install cac-sm -f /home/elxneiw/deploy/ews_CAC_MESH.yaml --namespace mycac /home/elxneiw/deploy/eric-tmo-cac-umbrella\nhelm install cac-adp -f /home/elxneiw/deploy/ews_CAC_ADP.yaml --namespace mycac /home/elxneiw/deploy/eric-tmo-cac-umbrella\nhelm install cac-common -f /home/elxneiw/deploy/ews_CAC_Common.yaml --namespace mycac /home/elxneiw/deploy/eric-tmo-cac-umbrella",
+      "value": "kubectl create namespace mycac\nkubectl get secret armdocker-pull-secret --namespace=default -oyaml | grep -vwE \"(namespace)\" | kubectl apply --namespace=mycac -f -\nkubectl create -f /home/elxneiw/deploy/rosetta.yaml --namespace mycac\n\nhelm install cac-sm -f /home/elxneiw/deploy/ews_CAC_MESH.yaml --namespace mycac /home/elxneiw/deploy/eric-tmo-cac-umbrella\nhelm install cac-adp -f /home/elxneiw/deploy/ews_CAC_ADP.yaml --namespace mycac /home/elxneiw/deploy/eric-tmo-cac-umbrella\nhelm install cac-common -f /home/elxneiw/deploy/ews_CAC_Common.yaml --namespace mycac /home/elxneiw/deploy/eric-tmo-cac-umbrella\nhelm install cac-nls-lstnrs -f /home/elxneiw/deploy/ews_CAC_NLS_LSTNRS.yaml --namespace mycac /home/elxneiw/deploy/eric-tmo-cac-umbrella",
       "podGroup": "bz-node-system",
       "open": true
     }
@@ -348,5 +769,6 @@
   "ns": "mycac",
   "alarmFrequency": "60",
   "autoCheckAlarm": "on",
-  "css": ""
+  "css": "",
+  "runningPodOnly": "on"
 }

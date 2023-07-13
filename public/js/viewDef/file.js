@@ -80,7 +80,7 @@ const _fileContentViewDef=[
         },
         _jqext:{
           click:function(){
-            k8s._uiSwitch._curPodDetails=''
+            _logHandler._switchToLog()
           }
         }
       }

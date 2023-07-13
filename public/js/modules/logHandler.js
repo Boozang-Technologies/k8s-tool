@@ -333,5 +333,12 @@ const _logHandler={
       
       return w+v
     }
+  },
+  _switchToLog:function(){
+    if(k8s._uiSwitch._curMainTab=='_pods'){
+      _logHandler._data._showLog=k8s._uiSwitch._curPodDetails=k8s._data._podList.find(x=>x._log)?"_log":0
+    }else{
+      k8s._uiSwitch._curPodDetails=0
+    }
   }
 }
