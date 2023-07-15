@@ -637,13 +637,24 @@
       },
       {
         "css": "background-color:#FFF;color:red;",
-        "value": "Message processing failed from queue"
+        "value": "splunk"
+      },
+      {
+        "enable": "on",
+        "css": "background-color:yellow;color:#000;",
+        "value": "\"sourcetype\""
+      },
+      {
+        "enable": "on",
+        "css": "background-color:yellow;color:#000;",
+        "value": "nls1"
       }
     ],
     "formatXML": "on",
     "formatJSON": "on",
     "autoMerge": "on",
-    "groupMerge": "on"
+    "groupMerge": "on",
+    "highlightOnly": "on"
   },
   "link": [
     {
@@ -661,11 +672,16 @@
       "faver": true
     },
     {
-      "open": "on",
       "value": "http://10.63.133.234:8585/#alarm-viewer",
       "name": "Check alarm",
       "podGroup": "bz-node-system",
       "faver": true
+    },
+    {
+      "open": "on",
+      "value": "https://sonarqube.lmera.ericsson.se/projects",
+      "name": "Snoar",
+      "podGroup": "bz-node-system"
     }
   ],
   "cmd": [
@@ -766,9 +782,9 @@
       "open": true
     }
   ],
-  "ns": "mycac",
+  "ns": "default",
   "alarmFrequency": "60",
   "autoCheckAlarm": "on",
-  "css": "",
+  "css": "dark",
   "runningPodOnly": "on"
 }

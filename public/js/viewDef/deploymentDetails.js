@@ -43,8 +43,8 @@ const _deploymentDetailsViewDef={
               },
               _jqext:{
                 click:function(){
-                  k8s._updateDeployment(k8s._data._curDeployment._content,function(){
-                    k8s._getDeployment(k8s._data._curDeployment._name)
+                  k8s._updateK8sItem(k8s._data._curDeployment._content,function(){
+                    k8s._getDeployment(k8s._data._curDeployment)
                   })
                 }
               }
@@ -57,8 +57,8 @@ const _deploymentDetailsViewDef={
               },
               _jqext:{
                 click:function(){
-                  k8s._data._curConfig._content=""
-                  k8s._getDeployment(k8s._data._curDeployment._name)
+                  k8s._data._curDeployment._content=""
+                  k8s._getDeployment(k8s._data._curDeployment)
                 }
               }
             },

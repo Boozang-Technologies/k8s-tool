@@ -38,6 +38,33 @@ const _serviceDetailsViewDef={
             {
               _tag:"button",
               _attr:{
+                class:"btn btn-icon bz-none-border bz-save",
+                title:"_k8sMessage._method._refresh"
+              },
+              _jqext:{
+                click:function(){
+                  k8s._updateK8sItem(k8s._data._curService._content,function(){
+                    k8s._getService(k8s._data._curService)
+                  })
+                }
+              }
+            },
+            {
+              _tag:"button",
+              _attr:{
+                class:"btn btn-icon bz-none-border bz-refresh bz-left-space-10",
+                title:"_k8sMessage._method._refresh"
+              },
+              _jqext:{
+                click:function(){
+                  k8s._data._curService._content=""
+                  k8s._getService(k8s._data._curService)
+                }
+              }
+            },
+            {
+              _tag:"button",
+              _attr:{
                 class:"btn btn-icon bz-none-border bz-close bz-left-space-10",
                 title:"_k8sMessage._method._close"
               },

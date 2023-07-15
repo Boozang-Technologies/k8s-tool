@@ -1019,17 +1019,19 @@ const k8s={
         _data:{
           method:"exeCmd",
           data:{
-            cmd:"kubectl get services "+d._name+" -n "+k8s._data._config.ns+" -o yaml"
+            cmd:"kubectl get services "+d._name+" -n "+k8s._data._config.ns+" -o json"
           }
         },
         _success:function(v){
           if(v!="BZ-COMPLETE"){
-            vv+=v
+            v=v.split("\n")
+            if(!vv){
+              v.shift()
+            }
+            vv+=v.join("\n")
           }else{
-            vv=vv.split("\n")
-            vv.shift()
-            
-            d._content=vv.join("\n")
+            vv=JSON.parse(vv)
+            d._content=JSON.stringify(vv,0,2)
           }
         }
       })
@@ -1133,7 +1135,7 @@ const k8s={
         _data:{
           method:"exeCmd",
           data:{
-            cmd:"kubectl get deployments "+d._name+" -n "+k8s._data._config.ns+" -o yaml"
+            cmd:"kubectl get deployments "+d._name+" -n "+k8s._data._config.ns+" -o json"
           }
         },
         _success:function(v){
@@ -1142,8 +1144,8 @@ const k8s={
           }else{
             vv=vv.split("\n")
             vv.shift()
-            
-            d._content=vv.join("\n")
+            vv=JSON.parse(vv.join("\n"))
+            d._content=JSON.stringify(vv,0,2)
           }
         }
       })
@@ -1612,7 +1614,7 @@ const k8s={
           _tag:"div",
           _attr:{
             id:id,
-            style:"min-height:240px;height:100%;"
+            style:"min-height:400px;height:100%;"
           },
           _items:[
             {
@@ -1680,7 +1682,7 @@ const k8s={
                         class:function(){
                           return 'btn btn-icon bz-none-border bz-'+(k8s._data[_remain]?'stop':'play')
                         },
-                        style:"margin-left:5px;"
+                        style:"margin-left: 10px !important;margin-right: 10px !important;"
                       },
                       _jqext:{
                         click:function(){
@@ -1709,19 +1711,21 @@ const k8s={
               ]
             }
           ]
-        },[],_k8sMessage._method.api,400,1,0,1)
+        },[],_k8sMessage._method.api,750,1,0,1)
         
         _doSend(1,1)
         _Util._attachResize("#"+id)
         function _doSend(n,ts){
           k8s._data[_remain]=n
           let _time=Date.now()
+              
           if(n>0){
+            let _api=_Util._jsonToCurl(t,d);
             _k8sProxy._send({
               _data:{
                 method:"exeAPI",
                 data:{
-                  api:_Util._jsonToCurl(t,d),
+                  api:_api,
                   times:ts||1
                 }
               },
@@ -2117,9 +2121,9 @@ const k8s={
       _data:{
         method:"exeCmd",
         data:{
-          fileName:"deployment.yaml",
+          fileName:"deployment.json",
           fileContent:v,
-          cmd:`kubectl -n ${k8s._data._config.ns} apply -f download/deployment.yaml`
+          cmd:`kubectl -n ${k8s._data._config.ns} apply -f download/deployment.json`
         }
       },
       _success:function(v){

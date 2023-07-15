@@ -294,9 +294,16 @@ const k8s={
   },
   exeAPI:function(d,_fun){
     console.log(d)
-    let s=d.api.split(" ")
+    let s=d.api.split(" "),
+        _api=d.api;
     for(let i=0;i<d.times;i++){
-      _exe(d.api,_fun)
+      _exe(d.api,function(x){
+        if(_api){
+          x=_api+"\n\n"+x
+          _api=""
+        }
+        _fun(x)
+      })
     }
     // _monitor(s.shift(),s,function(v){
     //   _fun(v)
