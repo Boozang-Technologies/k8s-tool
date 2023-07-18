@@ -52,7 +52,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-We would like to thank the following open-source projects for their contributions:
+k8s-tool is built using the following technologies
 
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com
+- [Boozang Framework](https://github.com/Boozang-Technologies/boozang-fm)
