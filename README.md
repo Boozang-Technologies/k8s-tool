@@ -7,6 +7,7 @@ The Kubernetes Management Tool is a powerful and user-friendly application built
 ## Features
 
 - **Cluster Management**: Easily connect to your Kubernetes clusters and manage them from a single interface. The tool supports multiple cluster configurations, allowing you to switch between clusters effortlessly.
+  
 - **Deployment**: Seamlessly deploy your applications to Kubernetes clusters with just a few clicks. The tool provides an intuitive interface for specifying deployment configurations, including container images, replica counts, resource limits, and more.
 
 - **Scaling**: Scale your applications horizontally or vertically based on demand. The tool offers a straightforward way to adjust the number of replicas and allocate resources as needed.
@@ -19,29 +20,27 @@ The Kubernetes Management Tool is a powerful and user-friendly application built
 
 - **Health Checks**: Perform health checks on your applications and receive alerts in case of failures. The tool supports defining custom health checks based on HTTP endpoints or specific metrics, ensuring the continuous availability of your applications.
 
+## Pre-conditions
+
+To run `k8s-tool`, you'll need to have a working Kubernetes enviroment and at least one namespace. 
+
+Make sure that you can run: `kubectl get namespace` successfully. 
+
 ## Installation
 
-To install and run the Kubernetes Management Tool locally, follow these steps:
+Follow these steps:
 
 1. Clone this repository: `git clone https://github.com/Boozang-Technologies/k8s-tool`
 2. Navigate to the project directory: `cd k8s-tool`
 3. Install dependencies using npm: `npm install`
 4. Start tool: `npm start`
-5. Open your browser and navigate to `http://localhost:8000` to access the tool's web interface.
+5. Open your browser and navigate to `http://localhost:8866` to access the tool's web interface.
 
 ## Configuration
 
-The configuration file (`config.js`) allows you to customize the tool based on your specific requirements. Here are some of the key configuration options:
+The settings file (`config/env/setting.txt`) allows you to customize the tool based on your specific requirements. All these seetings can be set in the tool, and will be saved here to persist your settings between sessions. This means you can keep many configurations, and simply swap this file out between settings.
 
-- `clusters`: Define your Kubernetes clusters by specifying their names, API endpoints, authentication credentials, and other relevant information.
-
-- `monitoring`: Configure the monitoring integration by specifying the address and credentials for the monitoring solution (e.g., Prometheus, Grafana).
-
-- `logging`: Configure the logging integration by specifying the address and credentials for the logging platform (e.g., ELK Stack, Fluentd).
-
-- `healthChecks`: Define custom health checks for your applications by specifying the endpoints, metrics, or other conditions to be monitored.
-
-Make sure to review and update the configuration file before running the application.
+To remove all your customization, simply remove `settings.txt` and restart the tool.
 
 ## Contributing
 
