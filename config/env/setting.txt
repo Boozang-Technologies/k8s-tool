@@ -32,206 +32,171 @@
       "p": "etc/../conf/cac-configs/cac-aca-conf/v0.0.5/ses.properties",
       "fd": false,
       "_pod": {
-        "_name": "cac-nls-lstnrs-eric-tmo-des-ms-achndlr-74bcc755cb-79l2f",
+        "_name": "cac-nls-lstnrs-eric-tmo-des-ms-achndlr-774898b98d-jckrj",
         "_ready": true,
         "_status": "Running",
-        "_age": "66m",
+        "_age": "125m",
         "_path": "etc/..",
         "g": 1,
         "gk": "achndlr",
         "_alarmValue": {
           "cpu": [
             {
-              "_time": 1689206247110,
-              "_value": 24,
-              "_percentage": 4
+              "_time": 1689641893816,
+              "_value": 41,
+              "_percentage": 8
             },
             {
-              "_time": 1689206320296,
-              "_value": 73,
-              "_percentage": 14,
-              "_increase": 49,
-              "_increasePercentage": 9.8
-            },
-            {
-              "_time": 1689206388513,
-              "_value": 29,
-              "_percentage": 5,
-              "_increase": -44,
-              "_increasePercentage": -8.8
-            },
-            {
-              "_time": 1689206456851,
-              "_value": 33,
-              "_percentage": 6,
-              "_increase": 4,
-              "_increasePercentage": 0.8
-            },
-            {
-              "_time": 1689206524912,
-              "_value": 44,
+              "_time": 1689641966096,
+              "_value": 42,
               "_percentage": 8,
-              "_increase": 11,
-              "_increasePercentage": 2.2
+              "_increase": 1,
+              "_increasePercentage": 0.2
             },
             {
-              "_time": 1689206593224,
-              "_value": 33,
-              "_percentage": 6,
-              "_increase": -11,
-              "_increasePercentage": -2.2
+              "_time": 1689642033292,
+              "_value": 61,
+              "_percentage": 12,
+              "_increase": 19,
+              "_increasePercentage": 3.8
             },
             {
-              "_time": 1689206661610,
-              "_value": 24,
-              "_percentage": 4,
-              "_increase": -9,
-              "_increasePercentage": -1.8
-            },
-            {
-              "_time": 1689206730612,
-              "_value": 32,
-              "_percentage": 6,
-              "_increase": 8,
-              "_increasePercentage": 1.6
-            },
-            {
-              "_time": 1689206798833,
-              "_value": 68,
-              "_percentage": 13,
-              "_increase": 36,
-              "_increasePercentage": 7.2
-            },
-            {
-              "_time": 1689206867264,
-              "_value": 29,
-              "_percentage": 5,
-              "_increase": -39,
-              "_increasePercentage": -7.8
-            },
-            {
-              "_time": 1689206935607,
-              "_value": 39,
+              "_time": 1689642100683,
+              "_value": 37,
               "_percentage": 7,
-              "_increase": 10,
-              "_increasePercentage": 2
+              "_increase": -24,
+              "_increasePercentage": -4.8
             },
             {
-              "_time": 1689207003836,
+              "_time": 1689642168234,
+              "_value": 25,
+              "_percentage": 5,
+              "_increase": -12,
+              "_increasePercentage": -2.4
+            },
+            {
+              "_time": 1689642235428,
+              "_value": 28,
+              "_percentage": 5,
+              "_increase": 3,
+              "_increasePercentage": 0.6
+            },
+            {
+              "_time": 1689642302833,
               "_value": 26,
               "_percentage": 5,
-              "_increase": -13,
-              "_increasePercentage": -2.6
+              "_increase": -2,
+              "_increasePercentage": -0.4
             },
             {
-              "_time": 1689207077082,
-              "_value": 35,
-              "_percentage": 7,
-              "_increase": 9,
-              "_increasePercentage": 1.8
+              "_time": 1689642370505,
+              "_value": 24,
+              "_percentage": 4,
+              "_increase": -2,
+              "_increasePercentage": -0.4
             },
             {
-              "_time": 1689207145619,
-              "_value": 27
+              "_time": 1689642437556,
+              "_value": 24,
+              "_percentage": 4,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642504846,
+              "_value": 25,
+              "_percentage": 5,
+              "_increase": 1,
+              "_increasePercentage": 0.2
+            },
+            {
+              "_time": 1689642571996,
+              "_value": 26,
+              "_percentage": 5,
+              "_increase": 1,
+              "_increasePercentage": 0.2
             }
           ],
           "memory": [
             {
-              "_time": 1689206247110,
-              "_value": 456,
-              "_percentage": 22
+              "_time": 1689641893816,
+              "_value": 441,
+              "_percentage": 21
             },
             {
-              "_time": 1689206320296,
-              "_value": 459,
-              "_percentage": 22,
-              "_increase": 3,
-              "_increasePercentage": 0.1
-            },
-            {
-              "_time": 1689206388513,
-              "_value": 459,
-              "_percentage": 22,
-              "_increase": 0,
+              "_time": 1689641966096,
+              "_value": 442,
+              "_percentage": 21,
+              "_increase": 1,
               "_increasePercentage": 0
             },
             {
-              "_time": 1689206456851,
-              "_value": 458,
-              "_percentage": 22,
+              "_time": 1689642033292,
+              "_value": 447,
+              "_percentage": 21,
+              "_increase": 5,
+              "_increasePercentage": 0.2
+            },
+            {
+              "_time": 1689642100683,
+              "_value": 446,
+              "_percentage": 21,
               "_increase": -1,
               "_increasePercentage": 0
             },
             {
-              "_time": 1689206524912,
-              "_value": 460,
-              "_percentage": 22,
-              "_increase": 2,
-              "_increasePercentage": 0.1
-            },
-            {
-              "_time": 1689206593224,
-              "_value": 460,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
-            },
-            {
-              "_time": 1689206661610,
-              "_value": 460,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
-            },
-            {
-              "_time": 1689206730612,
-              "_value": 460,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
-            },
-            {
-              "_time": 1689206798833,
-              "_value": 460,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
-            },
-            {
-              "_time": 1689206867264,
-              "_value": 461,
-              "_percentage": 22,
+              "_time": 1689642168234,
+              "_value": 447,
+              "_percentage": 21,
               "_increase": 1,
               "_increasePercentage": 0
             },
             {
-              "_time": 1689206935607,
-              "_value": 463,
-              "_percentage": 22,
-              "_increase": 2,
-              "_increasePercentage": 0.1
-            },
-            {
-              "_time": 1689207003836,
-              "_value": 463,
-              "_percentage": 22,
+              "_time": 1689642235428,
+              "_value": 447,
+              "_percentage": 21,
               "_increase": 0,
               "_increasePercentage": 0
             },
             {
-              "_time": 1689207077082,
-              "_value": 464,
-              "_percentage": 22,
+              "_time": 1689642302833,
+              "_value": 448,
+              "_percentage": 21,
               "_increase": 1,
               "_increasePercentage": 0
             },
             {
-              "_time": 1689207145619,
-              "_value": 464
+              "_time": 1689642370505,
+              "_value": 448,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642437556,
+              "_value": 448,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642504846,
+              "_value": 448,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642571996,
+              "_value": 448,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
             }
           ],
           "space": []
-        }
+        },
+        "_log": 0
       },
       "_name": "ses.properties",
       "_loading": 0,
@@ -242,206 +207,199 @@
       "p": "etc/../conf/cac-configs/cac-aca-conf/v0.0.5/permission_management.properties",
       "fd": false,
       "_pod": {
-        "_name": "cac-nls-lstnrs-eric-tmo-des-ms-achndlr-74bcc755cb-79l2f",
+        "_name": "cac-nls-lstnrs-eric-tmo-des-ms-achndlr-774898b98d-f7vbv",
         "_ready": true,
         "_status": "Running",
-        "_age": "66m",
+        "_age": "4m43s",
         "_path": "etc/..",
         "g": 1,
         "gk": "achndlr",
         "_alarmValue": {
           "cpu": [
             {
-              "_time": 1689206247110,
-              "_value": 24,
-              "_percentage": 4
+              "_time": 1689628957795,
+              "_value": 74,
+              "_percentage": 14
             },
             {
-              "_time": 1689206320296,
-              "_value": 73,
-              "_percentage": 14,
-              "_increase": 49,
-              "_increasePercentage": 9.8
+              "_time": 1689629025135,
+              "_value": 75,
+              "_percentage": 15,
+              "_increase": 1,
+              "_increasePercentage": 0.2
             },
             {
-              "_time": 1689206388513,
-              "_value": 29,
-              "_percentage": 5,
-              "_increase": -44,
-              "_increasePercentage": -8.8
+              "_time": 1689629097600,
+              "_value": 56,
+              "_percentage": 11,
+              "_increase": -19,
+              "_increasePercentage": -3.8
             },
             {
-              "_time": 1689206456851,
-              "_value": 33,
+              "_time": 1689629164711,
+              "_value": 93,
+              "_percentage": 18,
+              "_increase": 37,
+              "_increasePercentage": 7.4
+            },
+            {
+              "_time": 1689629232034,
+              "_value": 48,
+              "_percentage": 9,
+              "_increase": -45,
+              "_increasePercentage": -9
+            },
+            {
+              "_time": 1689629299512,
+              "_value": 51,
+              "_percentage": 10,
+              "_increase": 3,
+              "_increasePercentage": 0.6
+            },
+            {
+              "_time": 1689629366928,
+              "_value": 58,
+              "_percentage": 11,
+              "_increase": 7,
+              "_increasePercentage": 1.4
+            },
+            {
+              "_time": 1689629434159,
+              "_value": 32,
               "_percentage": 6,
-              "_increase": 4,
-              "_increasePercentage": 0.8
+              "_increase": -26,
+              "_increasePercentage": -5.2
             },
             {
-              "_time": 1689206524912,
-              "_value": 44,
+              "_time": 1689629501530,
+              "_value": 43,
               "_percentage": 8,
               "_increase": 11,
               "_increasePercentage": 2.2
             },
             {
-              "_time": 1689206593224,
-              "_value": 33,
+              "_time": 1689629568608,
+              "_value": 31,
               "_percentage": 6,
-              "_increase": -11,
-              "_increasePercentage": -2.2
+              "_increase": -12,
+              "_increasePercentage": -2.4
             },
             {
-              "_time": 1689206661610,
-              "_value": 24,
-              "_percentage": 4,
-              "_increase": -9,
-              "_increasePercentage": -1.8
-            },
-            {
-              "_time": 1689206730612,
+              "_time": 1689629640774,
               "_value": 32,
               "_percentage": 6,
-              "_increase": 8,
-              "_increasePercentage": 1.6
+              "_increase": 1,
+              "_increasePercentage": 0.2
             },
             {
-              "_time": 1689206798833,
-              "_value": 68,
-              "_percentage": 13,
-              "_increase": 36,
-              "_increasePercentage": 7.2
+              "_time": 1689629708059,
+              "_value": 36,
+              "_percentage": 7,
+              "_increase": 4,
+              "_increasePercentage": 0.8
             },
             {
-              "_time": 1689206867264,
+              "_time": 1689629775125,
               "_value": 29,
               "_percentage": 5,
-              "_increase": -39,
-              "_increasePercentage": -7.8
-            },
-            {
-              "_time": 1689206935607,
-              "_value": 39,
-              "_percentage": 7,
-              "_increase": 10,
-              "_increasePercentage": 2
-            },
-            {
-              "_time": 1689207003836,
-              "_value": 26,
-              "_percentage": 5,
-              "_increase": -13,
-              "_increasePercentage": -2.6
-            },
-            {
-              "_time": 1689207077082,
-              "_value": 35,
-              "_percentage": 7,
-              "_increase": 9,
-              "_increasePercentage": 1.8
-            },
-            {
-              "_time": 1689207145619,
-              "_value": 27
+              "_increase": -7,
+              "_increasePercentage": -1.4
             }
           ],
           "memory": [
             {
-              "_time": 1689206247110,
-              "_value": 456,
-              "_percentage": 22
+              "_time": 1689628957795,
+              "_value": 412,
+              "_percentage": 20
             },
             {
-              "_time": 1689206320296,
-              "_value": 459,
-              "_percentage": 22,
-              "_increase": 3,
-              "_increasePercentage": 0.1
-            },
-            {
-              "_time": 1689206388513,
-              "_value": 459,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
-            },
-            {
-              "_time": 1689206456851,
-              "_value": 458,
-              "_percentage": 22,
-              "_increase": -1,
-              "_increasePercentage": 0
-            },
-            {
-              "_time": 1689206524912,
-              "_value": 460,
-              "_percentage": 22,
+              "_time": 1689629025135,
+              "_value": 414,
+              "_percentage": 20,
               "_increase": 2,
               "_increasePercentage": 0.1
             },
             {
-              "_time": 1689206593224,
-              "_value": 460,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
+              "_time": 1689629097600,
+              "_value": 418,
+              "_percentage": 20,
+              "_increase": 4,
+              "_increasePercentage": 0.2
             },
             {
-              "_time": 1689206661610,
-              "_value": 460,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
+              "_time": 1689629164711,
+              "_value": 435,
+              "_percentage": 21,
+              "_increase": 17,
+              "_increasePercentage": 0.8
             },
             {
-              "_time": 1689206730612,
-              "_value": 460,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
+              "_time": 1689629232034,
+              "_value": 439,
+              "_percentage": 21,
+              "_increase": 4,
+              "_increasePercentage": 0.2
             },
             {
-              "_time": 1689206798833,
-              "_value": 460,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
-            },
-            {
-              "_time": 1689206867264,
-              "_value": 461,
-              "_percentage": 22,
+              "_time": 1689629299512,
+              "_value": 440,
+              "_percentage": 21,
               "_increase": 1,
               "_increasePercentage": 0
             },
             {
-              "_time": 1689206935607,
-              "_value": 463,
-              "_percentage": 22,
+              "_time": 1689629366928,
+              "_value": 441,
+              "_percentage": 21,
+              "_increase": 1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689629434159,
+              "_value": 442,
+              "_percentage": 21,
+              "_increase": 1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689629501530,
+              "_value": 444,
+              "_percentage": 21,
               "_increase": 2,
               "_increasePercentage": 0.1
             },
             {
-              "_time": 1689207003836,
-              "_value": 463,
-              "_percentage": 22,
-              "_increase": 0,
-              "_increasePercentage": 0
-            },
-            {
-              "_time": 1689207077082,
-              "_value": 464,
-              "_percentage": 22,
+              "_time": 1689629568608,
+              "_value": 445,
+              "_percentage": 21,
               "_increase": 1,
               "_increasePercentage": 0
             },
             {
-              "_time": 1689207145619,
-              "_value": 464
+              "_time": 1689629640774,
+              "_value": 445,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689629708059,
+              "_value": 449,
+              "_percentage": 21,
+              "_increase": 4,
+              "_increasePercentage": 0.2
+            },
+            {
+              "_time": 1689629775125,
+              "_value": 450,
+              "_percentage": 21,
+              "_increase": 1,
+              "_increasePercentage": 0
             }
           ],
           "space": []
-        }
+        },
+        "_log": 0
       },
       "_name": "permission_management.properties",
       "_loading": 0,
@@ -472,7 +430,177 @@
     },
     {
       "s": "achndlr",
-      "p": "etc/../conf/cac-configs/cac-location-event-handler-conf/v0.0.4/SppAdapter.properties"
+      "p": "etc/../conf/cac-configs/cac-location-event-handler-conf/v0.0.4/SppAdapter.properties",
+      "_pod": {
+        "_name": "cac-nls-lstnrs-eric-tmo-des-ms-achndlr-774898b98d-jckrj",
+        "_ready": true,
+        "_status": "Running",
+        "_age": "125m",
+        "_path": "etc/..",
+        "g": 1,
+        "gk": "achndlr",
+        "_alarmValue": {
+          "cpu": [
+            {
+              "_time": 1689641893816,
+              "_value": 41,
+              "_percentage": 8
+            },
+            {
+              "_time": 1689641966096,
+              "_value": 42,
+              "_percentage": 8,
+              "_increase": 1,
+              "_increasePercentage": 0.2
+            },
+            {
+              "_time": 1689642033292,
+              "_value": 61,
+              "_percentage": 12,
+              "_increase": 19,
+              "_increasePercentage": 3.8
+            },
+            {
+              "_time": 1689642100683,
+              "_value": 37,
+              "_percentage": 7,
+              "_increase": -24,
+              "_increasePercentage": -4.8
+            },
+            {
+              "_time": 1689642168234,
+              "_value": 25,
+              "_percentage": 5,
+              "_increase": -12,
+              "_increasePercentage": -2.4
+            },
+            {
+              "_time": 1689642235428,
+              "_value": 28,
+              "_percentage": 5,
+              "_increase": 3,
+              "_increasePercentage": 0.6
+            },
+            {
+              "_time": 1689642302833,
+              "_value": 26,
+              "_percentage": 5,
+              "_increase": -2,
+              "_increasePercentage": -0.4
+            },
+            {
+              "_time": 1689642370505,
+              "_value": 24,
+              "_percentage": 4,
+              "_increase": -2,
+              "_increasePercentage": -0.4
+            },
+            {
+              "_time": 1689642437556,
+              "_value": 24,
+              "_percentage": 4,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642504846,
+              "_value": 25,
+              "_percentage": 5,
+              "_increase": 1,
+              "_increasePercentage": 0.2
+            },
+            {
+              "_time": 1689642571996,
+              "_value": 26,
+              "_percentage": 5,
+              "_increase": 1,
+              "_increasePercentage": 0.2
+            }
+          ],
+          "memory": [
+            {
+              "_time": 1689641893816,
+              "_value": 441,
+              "_percentage": 21
+            },
+            {
+              "_time": 1689641966096,
+              "_value": 442,
+              "_percentage": 21,
+              "_increase": 1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642033292,
+              "_value": 447,
+              "_percentage": 21,
+              "_increase": 5,
+              "_increasePercentage": 0.2
+            },
+            {
+              "_time": 1689642100683,
+              "_value": 446,
+              "_percentage": 21,
+              "_increase": -1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642168234,
+              "_value": 447,
+              "_percentage": 21,
+              "_increase": 1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642235428,
+              "_value": 447,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642302833,
+              "_value": 448,
+              "_percentage": 21,
+              "_increase": 1,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642370505,
+              "_value": 448,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642437556,
+              "_value": 448,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642504846,
+              "_value": 448,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
+            },
+            {
+              "_time": 1689642571996,
+              "_value": 448,
+              "_percentage": 21,
+              "_increase": 0,
+              "_increasePercentage": 0
+            }
+          ],
+          "space": []
+        },
+        "_log": 0
+      },
+      "_name": "SppAdapter.properties",
+      "_loading": 0,
+      "_content": "#SPP Endpoint\nspp.adapter.protocol.type=http\nspp.adapter.host=eric-tmo-des-iam-sim.default.svc.cluster.local\n#spp.adapter.port if HTTP=8030|HTTPS=463\nspp.adapter.port=8000\nspp.adapter.gpns.context.path=pushnotification/v1.0/message\n\nspp.adapter.idle.conn.close.timeout.millisecs=10000\n\nspp.adapter.transmit.timeout.millisecs=10000\nspp.adapter.transmit.retries=3\nspp.adapter.transmit.retry.interval=3000\nspp.adapter.http.connection.pool=20\nspp.adapter.http.user.agent=\n\nspp.adapter.http.authentication.type=basic\nspp.adapter.http.username=ses\nspp.adapter.http.password=ses01\n\n\nspp.adapter.msisdn.country.code.prefix=\n\n#SPP https support\nspp.adapter.truststore.path=/opt/drutt/ca/messageAdaptor/conf/keystore.jks\nspp.adapter.keystore.path=/opt/drutt/ca/messageAdaptor/conf/keystore.jks\nspp.adapter.keystore.password=password\n"
     }
   ],
   "autoForward": {
@@ -653,8 +781,7 @@
     "formatXML": "on",
     "formatJSON": "on",
     "autoMerge": "on",
-    "groupMerge": "on",
-    "highlightOnly": "on"
+    "groupMerge": "on"
   },
   "link": [
     {
@@ -782,7 +909,7 @@
       "open": true
     }
   ],
-  "ns": "default",
+  "ns": "mycac",
   "alarmFrequency": "60",
   "autoCheckAlarm": "on",
   "css": "dark",

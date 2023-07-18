@@ -25,10 +25,16 @@ const k8s={
     _exe(s,function(v){
       if(v){
         console.log(v)
-        v=v.split(/\s+/)
-        v.shift()
-        s=`kill -9 `+v.shift()
-        _exe(s,_fun)
+        v=v.split("\n")[0]
+        if(!v.includes("ps aux | grep -P")){
+          console.log("1: "+v)
+          v=v.split(/\s+/)
+          v.shift()
+          s=`kill -9 `+v.shift()
+          _exe(s,_fun)
+        }else{
+          _fun()
+        }
       }
     })
   },

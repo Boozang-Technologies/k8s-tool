@@ -540,6 +540,35 @@ const _listViewDef={
                       _tag:"div",
                       _items:[
                         {
+                          _if:"k8s._uiSwitch._showMenu._key=='cmd'",
+                          _tag:"div",
+                          _attr:{
+                            class:"bz-menu-item"
+                          },
+                          _items:[
+                            {
+                              _tag:"button",
+                              _attr:{
+                                class:"btn btn-icon bz-small-btn bz-none-border bz-copy",
+                                style:"margin-right:10px;"
+                              }
+                            },
+                            {
+                              _tag:"span",
+                              _text:"_k8sMessage._method._enterShell"
+                            }
+                          ],
+                          _jqext:{
+                            click:function(){
+                              _Util._copyText("kubectl -n "+k8s._data._config.ns+" exec --stdin --tty "+'"'+this._data._item._name+'" -- /bin/bash;')
+                            }
+                          }
+                        },
+                        {
+                          _if:"k8s._uiSwitch._showMenu._key=='cmd'",
+                          _tag:"hr"
+                        },
+                        {
                           _tag:"div",
                           _attr:{
                             class:"bz-menu-item"
