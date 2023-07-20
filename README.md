@@ -22,7 +22,7 @@ The Kubernetes Management Tool is a powerful and user-friendly application built
 
 ## Pre-conditions
 
-To run `k8s-tool`, you'll need to have a working Kubernetes enviroment and at least one namespace. 
+To run `k8s-tool`, you'll need to have **NodeJS** installed. You also have a working **Kubernetes** enviroment and at least one namespace. 
 
 Make sure that you can run: `kubectl get namespace` successfully. 
 
