@@ -606,7 +606,8 @@
   "autoForward": {
     "eric-pm-alert": "9093:9093",
     "eric-pm-server": "9090:9090",
-    "naplstnr": "8080:8080"
+    "naplstnr": "8080:8080",
+    "query": "16686:16686"
   },
   "filter": {
     "mycac": "achndlr|napfltr|naplstnr|lochndlr|e911lstnr|nls-data-message-bus-kf|eric-pm-alert|eric-pm-server|profile|config|perm|query",
@@ -657,7 +658,8 @@
         "scope": {
           "nls-data-message-bus-kf": "on",
           "achndlr": "on",
-          "napfltr": "on"
+          "napfltr": "on",
+          "naplstnr": "on"
         }
       },
       {
@@ -668,7 +670,8 @@
         "scope": {
           "nls-data-message-bus-kf": "on",
           "achndlr": "on",
-          "napfltr": "on"
+          "napfltr": "on",
+          "naplstnr": "on"
         }
       },
       {
@@ -705,7 +708,7 @@
       {
         "type": "cpu",
         "content": "total",
-        "value": "20",
+        "value": "95",
         "scope": {
           "achndlr": "on",
           "napfltr": "on",
@@ -715,7 +718,7 @@
       {
         "type": "memory",
         "content": "total",
-        "value": "1",
+        "value": "80",
         "scope": {
           "achndlr": "on",
           "napfltr": "on",
@@ -725,7 +728,7 @@
       {
         "type": "memory",
         "content": "increase",
-        "value": "1",
+        "value": "5",
         "scope": {
           "achndlr": "on",
           "napfltr": "on",

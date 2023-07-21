@@ -1904,73 +1904,146 @@ const k8s={
 
       return
     }
-    let s=k8s._getServiceByPod(d)
-    if(s){
-      s=s._port.split("/")[0]
-      k8s._data._tmpValue=_findPort(s)
-      k8s._data._tmpChk=k8s._data._config.autoForward[d.gk]&&"on"
-      _Util._confirmMessage({
-        _tag:"div",
-        _items:[
-          {
-            _tag:"div",
-            _text:"_k8sMessage._info._askPort"
-          },
-          {
-            _tag:"input",
-            _attr:{
-              class:"form-control",
-              style:"width:calc(100% - 10px);margin:10px 0;padding:5px;"
-            },
-            _dataModel:"k8s._data._tmpValue"
-          },
-          {
-            _if:function(){
-              return d.gk
-            },
-            _tag:"div",
-            _items:[
-              {
-                _tag:"label",
-                _items:[
-                  {
-                    _tag:"input",
-                    _attr:{
-                      type:"checkbox"
-                    },
-                    _dataModel:"k8s._data._tmpChk"
-                  },
-                  {
-                    _tag:"span",
-                    _text:function(){
-                      return _k8sMessage._common._autoStart+' ('+d.gk+')'
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },[{
-        _title:_k8sMessage._method.forward,
-        _click:function(c){
-          let sv=k8s._data._tmpValue
-
-          if(d.gk){
-            if(k8s._data._tmpChk){
-              k8s._data._config.autoForward[d.gk]=sv+":"+s
-            }else{
-              delete k8s._data._config.autoForward[d.gk]
-            }
-            k8s._saveSetting()
-          }
-          k8s._sendForward(d,sv+":"+s,sv)
-    
-          c._ctrl._close()
+    let _podDetails=""
+    _k8sProxy._send({
+      _data:{
+        method:"exeCmd",
+        data:{
+          cmd:`kubectl describe pods ${d._name} -n ${k8s._data._config.ns}`
         }
-      }],0,400)
+      },
+      _success:function(v){
+        if(v!="BZ-COMPLETE"){
+          _podDetails+=v
+        }else{
+          let _findService,s=[];
+          _podDetails.split("\n").find(x=>{
+            x=x.trim()
+            if(!_findService){
+              if(x=="Containers:"){
+                _findService=1
+              }
+            }else if(x.match(/^Ports?: *[0-9]+\//)){
+              x=parseInt(x.split(":")[1].trim())+""
+              if(x){
+                s.push(x)
+              }
+            }
+          })
 
-    }
+          if(s.length){
+            k8s._data._toValue=s[0]
+            k8s._data._tmpValue=_findPort(s[0])
+      
+            k8s._data._tmpChk=k8s._data._config.autoForward[d.gk]&&"on"
+            _Util._confirmMessage({
+              _tag:"div",
+              _items:[
+                {
+                  _tag:"div",
+                  _text:"_k8sMessage._info._askPort"
+                },
+                {
+                  _tag:"div",
+                  _attr:{
+                    class:"input-group"
+                  },
+                  _items:[
+                    {
+                      _tag:"label",
+                      _attr:{
+                        class:"input-group-addon"
+                      },
+                      _text:"From localhost:"
+                    },
+                    {
+                      _tag:"input",
+                      _attr:{
+                        class:"form-control"
+                      },
+                      _dataModel:"k8s._data._tmpValue"
+                    }    
+                  ]
+                },
+                {
+                  _tag:"div",
+                  _attr:{
+                    class:"input-group"
+                  },
+                  _items:[
+                    {
+                      _tag:"label",
+                      _attr:{
+                        class:"input-group-addon"
+                      },
+                      _text:"To "+d._name+":"
+                    },
+                    {
+                      _tag:"select",
+                      _attr:{
+                        class:"form-control"
+                      },
+                      _items:[
+                        {
+                          _tag:"option",
+                          _text:"_data._item",
+                          _dataRepeat:s
+                        }
+                      ],
+                      _dataModel:"k8s._data._toValue"
+                    }    
+                  ]
+                },
+                {
+                  _if:function(){
+                    return d.gk
+                  },
+                  _tag:"div",
+                  _items:[
+                    {
+                      _tag:"label",
+                      _items:[
+                        {
+                          _tag:"input",
+                          _attr:{
+                            type:"checkbox"
+                          },
+                          _dataModel:"k8s._data._tmpChk"
+                        },
+                        {
+                          _tag:"span",
+                          _text:function(){
+                            return _k8sMessage._common._autoStart+' ('+d.gk+')'
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },[{
+              _title:_k8sMessage._method.forward,
+              _click:function(c){
+                let sv=k8s._data._tmpValue
+                s=k8s._data._toValue
+                if(d.gk){
+                  if(k8s._data._tmpChk){
+                    k8s._data._config.autoForward[d.gk]=sv+":"+s
+                  }else{
+                    delete k8s._data._config.autoForward[d.gk]
+                  }
+                  k8s._saveSetting()
+                }
+                k8s._sendForward(d,sv+":"+s,sv)
+          
+                c._ctrl._close()
+              }
+            }],0,400)
+          }        
+
+        }
+      }
+    })
 
     function _findPort(v){
       let f=k8s._data._podList.find(x=>{
