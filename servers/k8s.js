@@ -1,4 +1,7 @@
-const { exec } = require("child_process");
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+
+// const { exec } = require("child_process");
 const spawn = require('child_process').spawn
 const fs = require("fs");
 const _config=global._config;
@@ -399,15 +402,28 @@ function _buildRemoteK8sCmd(_data,_fun){
 }
 function _exe(s,_fun){
   // console.log(s)
-  exec(s, (_error, b, _stderr) => {
-    if(_error||_stderr){
-      _error=_error||_stderr
-      console.error(_error)
-      return _fun(_error)
+  // exec(s, (_error, b, _stderr) => {
+  //   if(_error||_stderr){
+  //     _error=_error||_stderr
+  //     console.error(_error)
+  //     return _fun(_error)
+  //   }
+  //   // console.log(b)
+  //   _fun(b)
+  // });
+
+  (async() => {
+    try {
+      try {
+        const { stdout, stderr } = await exec(s);
+        _fun(stdout);
+      } catch(err) {
+        return err;
+      }
+    } catch(err) {
+        console.log(err);
     }
-    // console.log(b)
-    _fun(b)
-  });
+  })();
 }
 
 function _monitor(_cmd,_args,_fun){
