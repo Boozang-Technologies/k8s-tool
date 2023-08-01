@@ -388,17 +388,30 @@ var _Util={
   },
   _jsonToCurl:function(d,v){
     try{
-      let h="",b="";
-      if(v.headers){
-        h=JSON.parse(_Util._parseDynamicText(v.headers))
-        h=Object.keys(h||{}).map(k=>{
-          return `--header '${k}: ${h[k]}'`
-        }).join(" ")
-      }
-      if(v.body){
-        b=`--data-raw '${_Util._parseDynamicText(v.body)}'`
-      }
-      let s=`curl --location --request ${v.method} 'http://localhost:${d._forwarding.split(":")[0]}${v.url}' ${h} ${b}`
+      let h="",b="",s;
+      // if(globalThis.env.platform=="linux"){
+        if(v.headers){
+          h=JSON.parse(_Util._parseDynamicText(v.headers))
+          h=Object.keys(h||{}).map(k=>{
+            return `-H "${k}: ${h[k]}"`
+          }).join(" ")
+        }
+        if(v.body){
+          b=`-d "${_Util._parseDynamicText(v.body)}"`
+        }
+        s=`curl -X ${v.method} "http://localhost:${d._forwarding.split(":")[0]}${v.url}" ${h} ${b}`
+      // }else{
+      //   if(v.headers){
+      //     h=JSON.parse(_Util._parseDynamicText(v.headers))
+      //     h=Object.keys(h||{}).map(k=>{
+      //       return `--header '${k}: ${h[k]}'`
+      //     }).join(" ")
+      //   }
+      //   if(v.body){
+      //     b=`--data-raw '${_Util._parseDynamicText(v.body)}'`
+      //   }
+      //   s=`curl --location --request ${v.method} 'http://localhost:${d._forwarding.split(":")[0]}${v.url}' ${h} ${b}`
+      // }
       return s
     }catch(ex){
       alert(ex.stack)

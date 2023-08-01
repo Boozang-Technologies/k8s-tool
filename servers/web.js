@@ -23,6 +23,9 @@ app.use(_express.static('./public'));
 app.use(function(req,res,next){
   res.header("Access-Control-Allow-Origin","*");
   res.header("Access-Control-Allow-Methods","GET");
+  if(req.url=="/init"){
+    return res.send(`globalThis.env={platform:"${process.platform}"}`)
+  }
   next();
 });
 
