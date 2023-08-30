@@ -1,6 +1,6 @@
 {
-  "name": "boozang-k8s-tools",
-  "version": "0.0.1",
+  "name": "k8s-tool",
+  "version": "0.0.2",
   "release-it": {
     "npm": {
       "publish": false
@@ -11,6 +11,9 @@
   },
   "description": "Boozang k8s learning",
   "main": "server.js",
+  "bin": {
+    "k8s-tool": "server.js"
+  }, 
   "scripts": {
     "start": "node server.js"
   },
