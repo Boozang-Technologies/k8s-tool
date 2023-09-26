@@ -560,7 +560,26 @@ const _listViewDef={
                           ],
                           _jqext:{
                             click:function(){
-                              _Util._copyText("kubectl -n "+k8s._data._config.ns+" exec --stdin --tty "+'"'+this._data._item._name+'" -- /bin/bash;')
+                              let s="kubectl -n "+k8s._data._config.ns+" exec --stdin --tty "+'"'+this._data._item._name+'" -- /bin/bash;'
+                              _Util._confirmMessage({
+                                _tag:"div",
+                                _items:[
+                                  {
+                                    _tag:"div",
+                                    _attr:{
+                                      class:"bz-shell-cmd",
+                                      style:"padding:10px;white-space:nowrap;width:500px;"
+                                    },
+                                    _text:s
+                                  }
+                                ]
+                              },[{
+                                _title:"copy",
+                                _click:function(){
+                                  let ui=$(".bz-shell-cmd")[0]
+                                  _Util._copyText(ui,document,ui)
+                                }
+                              }],"Copy cmd line",650,"_close")
                             }
                           }
                         },

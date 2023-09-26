@@ -44,7 +44,7 @@ const _k8sMessage={
     _noteAddFavorites:"Note: Please expend pod file list and click ☆ to add your favorites."
   },
   _method:{
-    _enterShell:"Enter shell cmd",
+    _enterShell:"Get enter shell cmd",
     _execute:"Execute",
     _nsFilter:"Namespace filter",
     _itemFilter:"Pod/Service filter",
