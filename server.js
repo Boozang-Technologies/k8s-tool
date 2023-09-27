@@ -1,3 +1,6 @@
+#! /usr/bin/env node
+
+
 // Invoke 'strict' JavaScript mode
 'use strict'
 

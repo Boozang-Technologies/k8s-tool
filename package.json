@@ -1,6 +1,6 @@
 {
   "name": "k8s-tool",
-  "version": "0.0.2",
+  "version": "0.1.2",
   "release-it": {
     "npm": {
       "publish": false
