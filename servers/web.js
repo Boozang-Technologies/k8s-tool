@@ -12,7 +12,7 @@ http.listen(_config["http-port"], () => {
 });
 
 
-app.use(_express.static('public'));
+app.use(_express.static(__dirname + '/../public'));
 app.use(function(req,res,next){
   res.header("Access-Control-Allow-Origin","*");
   res.header("Access-Control-Allow-Methods","GET");
