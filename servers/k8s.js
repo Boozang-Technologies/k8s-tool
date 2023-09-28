@@ -5,11 +5,14 @@ const exec = util.promisify(require('child_process').exec);
 const spawn = require('child_process').spawn
 const fs = require("fs");
 const _config=global._config;
-let settings;
+let settings,settingFile=process.cwd()+"/setting.json";
+if(!fs.existsSync(settingFile)){
+  fs.writeFileSync(settingFile,"{}")
+}
 const k8s={
   getConfig:function(d,_fun){
     if(!settings){
-      settings=fs.readFileSync("config/env/setting.txt")||"{}"
+      settings=fs.readFileSync(settingFile)||"{}"
       settings=JSON.parse(settings)
     }
     _fun(settings)
@@ -17,7 +20,7 @@ const k8s={
   saveConfig:function(c){
     console.log(c)
     settings=c
-    fs.writeFileSync("config/env/setting.txt",JSON.stringify(c,0,2))
+    fs.writeFileSync(settingFile,JSON.stringify(c,0,2))
   },
   getNamespaceList:function(_fun){
     _exe("kubectl get namespace",_fun)
