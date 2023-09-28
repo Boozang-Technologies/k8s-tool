@@ -5,7 +5,7 @@ const exec = util.promisify(require('child_process').exec);
 const spawn = require('child_process').spawn
 const fs = require("fs");
 const _config=global._config;
-let settings,settingFile=process.cwd()+"/setting.json";
+let settings,settingFile=process.cwd()+"/settings.json";
 if(!fs.existsSync(settingFile)){
   fs.writeFileSync(settingFile,"{}")
 }
