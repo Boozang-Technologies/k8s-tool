@@ -39,7 +39,7 @@ Follow these steps:
 
 Follow these steps:
 
-1. Create a k8s-tool application folder to hold your `k8s-tool` configuration
+1. Create a `k8s-tool` application folder to hold your `k8s-tool` configuration
 2. Go to directory
 3. Install `k8s-tool` globally: `npm install -g k8s-tool`
 4. Start tool: `k8s-tool`
