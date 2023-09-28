@@ -202,8 +202,10 @@ const _logHandler={
     })
     _CtrlDriver._refreshData(_logHandler._data,"_logList")
   },
-  _addLog:function(v,p){
+  _addLog:function(v,ns,p){
     let _regex;
+    p.ws=p.ws||{}
+    p.ws[ns]=1
     try{
       _regex=_logHandler._data._setting.autoMerge?new RegExp(_logHandler._data._setting.cleanDynamicRegex,"gi"):0
     }catch(ex){}
@@ -229,24 +231,34 @@ const _logHandler={
             }
             return 1
           })){
-            v.forEach(x=>{
+            v.forEach((x,j)=>{
               x.m.d.r+=1
               let r=$(x.m).find("span.bz-log-repeat")[0]
               if(r){
                 r.innerText=x.m.d.r
               }else{
-                $(x.m).append($(`<span class="bz-log-repeat">${x.m.d.r}</span>`)[0])
+                $(x.m).before($(`<span class="bz-log-repeat">${x.m.d.r}</span>`)[0])
+              }
+              if(!j&&Object.keys(p.ws).length>1){
+                r=$(x.m).find("div.bz-log-from")[0]
+                if(r){
+                  if(!r.innerText.includes(ns)){
+                    r.innerText=r.innerText.replace(/:$/,", "+ns+":")
+                  }
+                }else{
+                  $(x.m).before($(`<div class="bz-log-from">${ns}:</div>`)[0])
+                }
               }
             })
           }else{
-            v.forEach(x=>{
+            v.forEach((x,j)=>{
               if(x){
                 if(p._even){
                   p._even=""
                 }else{
                   p._even="even"
                 }
-                let r=""
+                let r="",_from="";
                 if(x.r){
                   r=`<span class="bz-log-repeat">${x.r}</span>`
                 }
@@ -254,7 +266,11 @@ const _logHandler={
                 if(!h){
                   return
                 }
-                let o=$(`<pre class="${p._even}">${h}${r}</pre>`)[0]
+
+                if(!j&&Object.keys(p.ws).length>1){
+                  _from=`<div class="bz-log-from">${ns}:</div>`
+                }
+                let o=$(`<pre class="${p._even}">${_from}${r}${h}</pre>`)[0]
                 o.d=x
                 delete x.m
                 e.append(o)

@@ -648,6 +648,9 @@ header{
   top: 65px !important;
   height: calc(100% - 150px) !important;
 }
+.bz-log-from{
+  color:var(--active-word-color);
+}
 .bz-log-repeat{
   border-radius: 10px;
   color:var(--background-color);
