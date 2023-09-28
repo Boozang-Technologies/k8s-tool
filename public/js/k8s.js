@@ -1661,12 +1661,23 @@ const k8s={
                   _attr:{
                     class:"bz-precentage-bar",
                     style:function(){
-                      let c=(1-k8s._data[_remain]/parseInt(k8s._data[_exeCount]))*100+"%"
-                      
-                      return "width:"+c
+                      let c=(1-k8s._data[_remain]/parseInt(k8s._data[_exeCount]))*100
+                      if(c<0){
+                        c=0
+                      }else if(c>100){
+                        c=100
+                      }
+
+                      return "width:"+c+"%"
                     },
                     precentage:function(){
-                      return parseInt((1-k8s._data[_remain]/parseInt(k8s._data[_exeCount]))*100)+"%"
+                      let v= parseInt((1-k8s._data[_remain]/parseInt(k8s._data[_exeCount]))*100)
+                      if(v<0){
+                        v=0
+                      }else if(v>100){
+                        v=100
+                      }
+                      return v+"%"
                     }
                   }
                 },
@@ -1689,7 +1700,7 @@ const k8s={
                           if(!k8s._data[_remain]){
                             _doSend(...k8s._data[_exeCount].split(","))
                           }else{
-                            k8s._data[_remain]=0
+                            k8s._data[_remain]=1
                           }
                         }
                       }
@@ -1719,7 +1730,7 @@ const k8s={
           k8s._data[_remain]=n
           let _time=Date.now()
               
-          if(n>0){
+          if(n!=0){
             let _api=_Util._jsonToCurl(t,d);
             _k8sProxy._send({
               _data:{
@@ -1732,7 +1743,11 @@ const k8s={
               _success:function(v){
                 _updateResponse(v,1)
                 setTimeout(()=>{
-                  _doSend(k8s._data[_remain]-1)
+                  if(k8s._data[_remain]<0){
+                    _doSend(k8s._data[_remain])
+                  }else if(k8s._data[_remain]>0){
+                    _doSend(k8s._data[_remain]-1)
+                  }
                 },_time+1000-Date.now())
               }
             })  
