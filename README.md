@@ -25,19 +25,33 @@ Make sure that you can run: `kubectl get namespace` successfully.
 
 ## Installation
 
+### Running from source
+
 Follow these steps:
 
 1. Clone this repository: `git clone https://github.com/Boozang-Technologies/k8s-tool`
 2. Navigate to the project directory: `cd k8s-tool`
 3. Install dependencies using npm: `npm install`
 4. Start tool: `npm start`
-5. Open your browser and navigate to `http://localhost:8866` to access the tool's web interface.
+5. Open your browser and navigate to `http://localhost:8866` to access the tool's web interface
+
+### Running as an NPM package
+
+Follow these steps:
+
+1. Create a k8s-tool application folder to hold your `k8s-tool` configuration
+2. Go to directory
+3. Install `k8s-tool` globally: `npm install -g k8s-tool`
+4. Start tool: `k8s-tool`
+5. Open your browser and navigate to `http://localhost:8866` to access the tool's web interface
 
 ## Configuration
 
-The settings file (`config/env/setting.txt`) allows you to customize the tool based on your specific requirements. All these seetings can be set in the tool, and will be saved here to persist your settings between sessions. This means you can keep many configurations, and simply swap this file out between settings.
+The settings file (`settings.json`) allows you to customize the tool based on your specific requirements. All these seetings can be set in the tool, and will be saved here to persist your settings between sessions. This means you can keep many configurations, and simply swap this file out between settings.
 
-To remove all your customization, simply remove `settings.txt` and restart the tool.
+If you are running k8s-tool as an NPM package, the `settings.json` will be created in the current working directory. Remember to run the command in the same directory to retain saved configuration, and to use the configuration from a team member, simply copy it to the current directory where you are running the tool.
+
+To remove all your customization, simply remove `settings.json` and restart the tool.
 
 ## Contributing
 
