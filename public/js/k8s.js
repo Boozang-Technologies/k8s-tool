@@ -1801,11 +1801,11 @@ const k8s={
     v=v.replace(/\{\$bz-group\}/g,_group)
     v=v.replace(/\{\$bz-pod\}/g,window["$bz-pod"])
 
-    let ps=v.match(/\{\$parameter:[^\}]+\}/g)
+    let ps=v.match(/\{\$bz-parameter:[^\}]+\}/g)
     if(ps){
       ps=[...new Set(ps)]
       k8s._data._tmpParameters=ps.map(x=>{
-        let xx=x.replace("{$parameter:","").replace(/\}$/,"").trim();
+        let xx=x.replace("{$bz-parameter:","").replace(/\}$/,"").trim();
         xx=xx.split("=");
         let vv=(xx[1]||"").trim().split("|")
 
