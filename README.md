@@ -45,6 +45,19 @@ Follow these steps:
 4. Start tool: `k8s-tool`
 5. Open your browser and navigate to `http://localhost:8866` to access the tool's web interface
 
+### Running from executable (Windows, MacOS, Linux)
+
+Follow these steps:
+
+1. Create a `k8s-tool` application folder to hold your `k8s-tool` configuration
+2. Go to directory
+3. Download executable for your operating system
+    - Windows: https://github.com/Boozang-Technologies/k8s-tool/raw/main/dist/k8s-tool-win.exe
+    - MacOS https://github.com/Boozang-Technologies/k8s-tool/raw/main/dist/k8s-tool-macos
+    - Linux: https://github.com/Boozang-Technologies/k8s-tool/raw/main/dist/k8s-tool-linux
+4. Run the executable from shell or by double-clicking it 
+5. Open your browser and navigate to `http://localhost:8866` to access the tool's web interface
+
 ## Configuration
 
 The settings file (`settings.json`) allows you to customize the tool based on your specific requirements. All these seetings can be set in the tool, and will be saved here to persist your settings between sessions. This means you can keep many configurations, and simply swap this file out between settings.
