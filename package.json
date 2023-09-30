@@ -1,6 +1,6 @@
 {
   "name": "k8s-tool",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "release-it": {
     "npm": {
       "publish": false
@@ -22,6 +22,11 @@
   ],
   "author": "Wensheng Li and Mats Ljunggren",
   "license": "MIT",
+  "pkg": {
+    "scripts":["public/**/*.js","server/*.js"],
+    "assets":["public/*.html","public/css/*.css"],
+    "outputPath": "dist"
+  },
   "dependencies": {
     "mkdirp": "^1.0.4",
     "express": "latest",

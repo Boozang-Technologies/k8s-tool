@@ -1,4 +1,4 @@
-const util = require('util');
+  const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 // const { exec } = require("child_process");
@@ -7,11 +7,13 @@ const fs = require("fs");
 const _config=global._config;
 let settings,settingFile=process.cwd()+"/settings.json";
 if(!fs.existsSync(settingFile)){
+  console.log("Creating settings file: " + settingFile)
   fs.writeFileSync(settingFile,"{}")
 }
 const k8s={
   getConfig:function(d,_fun){
     if(!settings){
+      console.log("Loading settings file: " + settingFile)
       settings=fs.readFileSync(settingFile)||"{}"
       settings=JSON.parse(settings)
     }
