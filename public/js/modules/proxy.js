@@ -23,7 +23,7 @@ const _k8sProxy={
         let f=_k8sProxy._sentMap[_msg.k]
         if(f&&f._success){
           let d=_msg.data
-          if(d&&d.cmd&&!d.link){
+          if(d&&d.cmd&&!d.alarms){
             if(f._error){
               f._error(d)
             }else{
