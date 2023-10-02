@@ -2253,10 +2253,15 @@ const k8s={
         method:"getNamespaceList"
       },
       _success:function(v){
+        let rr=v
         v=v.trim().split("\n").map(x=>x.split(/\s+/))
-        v.shift()
-        v=v.map(x=>x[0])
-        k8s._data._namespaceList=v
+        let r=v.shift()
+        if(r[1]=="failed:"){
+          alert(rr)
+        }else{
+          v=v.map(x=>x[0])
+          k8s._data._namespaceList=v
+        }
         _fun&&_fun()
       }
     })

@@ -423,6 +423,7 @@ function _exe(s,_fun){
         const { stdout, stderr } = await exec(s);
         _fun(stdout);
       } catch(err) {
+        _fun(err.message)
         return err;
       }
     } catch(err) {
