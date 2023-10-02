@@ -15,8 +15,13 @@ const k8s={
     if(!settings){
       console.log("Loading settings file: " + settingFile)
       settings=fs.readFileSync(settingFile)||"{}"
+      console.log("Settings: ", settings)
       settings=JSON.parse(settings)
+      console.log("Settings parsed: ", settings)
+
     }
+    console.log("Settings parsed 2: ", settings)
+
     _fun(settings)
   },
   saveConfig:function(c){
