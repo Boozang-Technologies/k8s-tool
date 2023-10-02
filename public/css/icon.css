@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/font/icomoon.eot?3x065d');
+  src:  url('/font/icomoon.eot?3x065d#iefix') format('embedded-opentype'),
+    url('/font/icomoon.woff2?3x065d') format('woff2'),
+    url('/font/icomoon.ttf?3x065d') format('truetype'),
+    url('/font/icomoon.woff?3x065d') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: block;
+}
+
+*::before,*::after{
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  position: relative;
+}
+
 .bz-small-loading,
 .bz-loading{
   top: 10px;
@@ -62,33 +80,30 @@
 }
 
 .bz-light::before{
-  content:"☀";
-  font-weight: 400;
-  font-size: 20px;
+  content:"\ea2e";
 }
 
 .bz-dark::before{
-  content:"☾"
+  content:"\ea2d"
 }
 
 .bz-logo{
   background-image: url(/css/logo-s.png);
 }
 .bz-computer:before{
-  content: "💻";
-  position: relative;
-  top:-2px;
+  font-size:13px;
+  content: "\e9ff";
 }
 .bz-failed:before{
   content: "💀";
   font-size:11px;
 }
 .bz-search:before{
-  content: "🔎";
+  content: "\e99f";
   font-size: 13px;
 }
 .bz-flag::before{
-  content: "⚑";
+  content: "\e935";
   color:red;
   margin-right:10px;
   font-size: 17px;
@@ -100,7 +115,7 @@
 }
 
 .bz-edit::before{
-  content: "✍";
+  content: "\e986";
   position: relative;
   top: -5px;
 }
@@ -111,18 +126,20 @@
 .bz-camera-panel:hover{
   border: var(--bz-border);
 }
-.bz-camera-panel:hover:before,
-.bz-camera::before{
-  content: "📷";
+.bz-camera-panel:hover:before{
+  content: "\e904";
   cursor: pointer;
-  background: #CCC;
-  padding: 2px 2px 3px 3px;
+  background-color: var(--background-color);
+  padding: 5px 4px;
   border-radius: 20px;
   border: var(--bz-border);
   right: 5px;
-  top:5px;
+  top: 6px;
   position: relative;
   float: right;
+  color: #000;
+  font-size: 11px;
+  margin-left: -20px;
 }
 .bz-taking-picture{
   background-color: var(--background-color);
@@ -138,55 +155,43 @@ button.bz-folder-close{
   left: 1px;
 }
 .bz-folder-open:before{
-  content:"📂";
+  content:"\e990";
   font-size:13px;
 }
 .bz-folder-close:before{
-  content:"🖿";
+  content:"\e98f";
   font-size:13px;
 }
 .bz-add-folder:before{
-  content:"🗀";
+  content:"e991";
   font-size: 17px;
   position: relative;
   top: -1px;
 }
 .bz-add-file:before{
-  content: "🗋";
+  content: "\e989";
   font-size: 20px;
   position: relative;
   top: -2px;
 }
-.bz-add-folder span,
-.bz-add-file span{
-  position: absolute;
-  margin: 7px -13px;
-  font-size: 10px;
-}
-.bz-add-folder span{
-  margin: 4px -15px;
-}
 .bz-file:before{
-  content:"📄";
+  content:"\e98b";
   font-size:11px;
 }
 .bz-refresh{
   transform: rotate(90deg);
 }
 .bz-refresh:before{
-  content:"⭮";
-  font-weight: bold;
+  content:"\e9c5";
   font-size:13px;
-  position: relative;
-  top:-1px;
 }
 .bz-save:before{
-  content:"💾";
+  content:"\e9db";
   font-weight: bold;
   font-size:13px;
 }
 .bz-forward:before{
-  content:"⮞";
+  content:"\e9c8";
   font-size: 13px;
   position: relative;
   top: -1px;
@@ -195,30 +200,16 @@ button.bz-folder-close{
   margin-right:10px !important;
 }
 .bz-plus:before{
-  content:"🞤";
-  font-size: 13px;
-  position: relative;
-  top: -1px;
+  content:"\e9b4";
+  font-size: 11px;
 }
 .bz-copy:before{
-  content:"⬜";
-  font-size: 9px;
-  position: relative;
-  top: -3px;
-  left: 5px;
-}
-.bz-copy:after{
-  content:"⬜";
-  font-size: 9px;
-  position: relative;
-  top: 0px;
-  left: -5px;
+  content:"\e98c";
+  font-size: 13px;
 }
 .bz-log:before{
-  content:"🧾";
-  font-size: 11px;
-  position: relative;
-  top: -1px;
+  content:"\e94e";
+  font-size: 13px;
 }
 .bz-network:before{
   content:"🖧";
@@ -231,9 +222,11 @@ button.bz-folder-close{
   transform: rotate(180deg);
 }
 .bz-download:before{
-  content:"⇪";
-  font-size:15px;
-  border-top:2px solid var(--word-color);
+  content:"\ea2b";
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  top: -2px;
 }
 *[disabled]::before{
   color:var(--disable-color) !important;
@@ -247,17 +240,13 @@ button.bz-folder-close{
 
 .bz-open-item:before,
 .bz-close-item:before{
-  content: "›";
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  top: -2px;
+  content: "\ea22";
+  font-size: 13px;
 }
 
 .bz-close:before{
-  content: "✖";
+  content: "\e90a";
   font-size:13px;
-  font-weight: bold;
 }
 
 .bz-star:before{
@@ -296,13 +285,13 @@ button.bz-folder-close{
   font-size:15px;
 }
 .bz-delete:before{
-  content:"🗑";
+  content:"\e9a8";
   font-size:15px;
   font-stretch: expanded;
 }
 
 .bz-delete-pod:before{
-  content:"🗑";
+  content:"\e9a8";
   font-size:17px;
   font-stretch: expanded;
   position: relative;
@@ -316,7 +305,7 @@ button.bz-folder-close{
 }
 
 .bz-setting:before{
-  content:"⛭";
+  content:"\e9dc";
   font-size:13px;
 }
 
@@ -332,24 +321,22 @@ button.bz-folder-close{
   transform: rotate(90deg);
 }
 .bz-link:before{
-  content:"🔗";
+  content:"\e9ac";
   font-size:13px;
 }
 
 .bz-api:before{
-  content:"⇄";
+  content:"\e95d";
 }
 
 .bz-play:before{
-  content:"▶";
-  color:red;
+  content:"\e927";
+  color:red !important;
   font-size:13px;
-  position: relative;
-  top: 2px;
 }
 .bz-stop:before{
-  content:"⏹";
-  color:red;
+  content:"\e9bf";
+  color:red !important;
   font-size:13px;
 }
 .bz-filter{
@@ -357,21 +344,13 @@ button.bz-folder-close{
   margin: -12px !important;
 }
 .bz-filter:before{
-  content: "🞃";
+  content: "\ea33";
   font-size: 17px;
-  position: absolute;
-  top: -3px;
-  left: 5px;
-  margin: 0;
+  position: relative;
+  top: 3px;
+  left: -2px;
 }
-.bz-filter:after{
-  content: "𝅛";
-  font-size: 15px;
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  margin: 0;
-}
+
 .bz-corner-resize:before{
   content:"◢";
   font-size: 18px;
@@ -386,7 +365,7 @@ button.bz-folder-close{
 }
 
 .bz-pod:before{
-  content: "🧊";
+  content: "\e943";
   font-size: 13px;
 }
 

@@ -453,8 +453,7 @@ const k8s={
             {
               _tag:"button",
               _attr:{
-                class:"btn btn-icon bz-plus bz-none-border",
-                style:"margin-right: 10px;"
+                class:"btn btn-icon bz-plus bz-none-border"
               },
               _jqext:{
                 click:function(ex){

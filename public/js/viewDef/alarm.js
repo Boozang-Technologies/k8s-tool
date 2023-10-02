@@ -119,7 +119,8 @@ const _alarmViewDef={
           _tag:"button",
           _attr:{
             disabled:"k8s._data._config.autoCheckAlarm||!(k8s._data._config.alarms||{})[k8s._data._config.ns].length",
-            class:"'btn btn-icon bz-none-border bz-space-15 bz-bottom-space-5 '+(k8s._uiSwitch._alarmPlay?'bz-stop':'bz-play')",
+            class:"'btn btn-icon bz-none-border '+(k8s._uiSwitch._alarmPlay?'bz-stop':'bz-play')",
+            style:"margin:15px 5px 0 5px;",
             title:"k8s._uiSwitch._alarmPlay?_k8sMessage._method._stop:_k8sMessage._method._play"
           },
           _jqext:{
@@ -137,7 +138,8 @@ const _alarmViewDef={
           _tag:"button",
           _attr:{
             disabled:"!(k8s._data._config.alarms||{})[k8s._data._config.ns].length",
-            class:"btn btn-icon bz-none-border bz-space-15 bz-bottom-space-5 bz-refresh",
+            class:"btn btn-icon bz-none-border bz-refresh",
+            style:"margin:15px 5px 0 5px;",
             title:"_k8sMessage._method._refresh"
           },
           _jqext:{

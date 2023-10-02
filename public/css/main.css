@@ -955,9 +955,7 @@ input:checked:before{
   text-decoration: underline;
 }
 .bz-middle-btn{
-  width: 20px;
-  height: 20px;
-  margin: 7px 5px 0 5px;
+  margin:5px 0 0 0;
 }
 
 .bz-list-row.bz-highlight{
