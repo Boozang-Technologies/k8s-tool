@@ -24,7 +24,7 @@
   "license": "MIT",
   "pkg": {
     "scripts":["public/**/*.js","server/*.js"],
-    "assets":["public/*.html","public/css/*.css"],
+    "assets":["public/*.html","public/css/*.css","public/font/*","node_modules/socket.io/client-dist/*.js"],
     "outputPath": "dist"
   },
   "dependencies": {
