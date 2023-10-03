@@ -166,7 +166,7 @@ button.bz-folder-close{
 }
 .bz-add-folder:before{
   content:"\e991";
-  font-size: 137px;
+  font-size: 13px;
 }
 .bz-add-file:before{
   content: "\e989";
@@ -273,7 +273,7 @@ button.bz-folder-close{
 }
 
 .bz-sweap:before{
-  content:"🗲";
+  content:"\e909";
   font-size:15px;
 }
 .bz-delete:before{
