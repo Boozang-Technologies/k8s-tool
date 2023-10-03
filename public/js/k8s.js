@@ -2408,9 +2408,12 @@ const k8s={
           return
         }
         if(v.match(/^Error: /)){
-          return alert(v)
+          k8s._errTimer=setTimeout(()=>{
+            return alert(v)
+          },1000)
+          return
         }
-
+        clearTimeout(k8s._errTimer)
         v=v.trim().split("\n").map(x=>x.split(/\s+/))
         v.shift()
         v=v.map(x=>{
