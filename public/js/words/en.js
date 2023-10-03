@@ -65,6 +65,7 @@ const _k8sMessage={
     star:"Bookmark",
     _refresh:"Refresh",
     _download:"Download",
+    copy:"Copy item name",
     _copy:"Copy item name",
     download:"Download",
     _deleteNameSpace:"Delete Name Space",
