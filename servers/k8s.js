@@ -463,7 +463,7 @@ function _monitor(_cmd,_args,_fun){
     });
     
     ls.stderr.on('data', function (data) {
-      _fun(data.toString());
+      _fun("Error: "+data.toString());
     });
     
     ls.on('exit', function (code) {

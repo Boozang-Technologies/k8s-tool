@@ -2407,12 +2407,12 @@ const k8s={
         if(v=="COMPLETE: 0"){
           return
         }
-        let ov=v
+        if(v.match(/^Error: /)){
+          return alert(v)
+        }
+
         v=v.trim().split("\n").map(x=>x.split(/\s+/))
         v.shift()
-        if(!v.length){
-          return alert(ov)
-        }
         v=v.map(x=>{
           let n=x.pop()
           if(x[x.length-1]=="->"){
