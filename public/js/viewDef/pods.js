@@ -366,7 +366,8 @@ const _listViewDef={
                       _tag:"button",
                       _attr:{
                         class:"btn btn-icon bz-small-btn bz-none-border bz-press bz-forward",
-                        style:"margin:2px;"
+                        style:"margin:2px;",
+                        title:"_k8sMessage._method.forward"
                       }
                     },
                     {
@@ -374,7 +375,8 @@ const _listViewDef={
                       _tag:"button",
                       _attr:{
                         class:"btn btn-icon bz-small-btn bz-none-border bz-press bz-log",
-                        style:"margin:2px;"
+                        style:"margin:2px;",
+                        title:"_k8sMessage._method.log"
                       }
                     }
                   ],
@@ -407,7 +409,8 @@ const _listViewDef={
                             c+=" bz-press"
                           }
                           return c
-                        }
+                        },
+                        title:"_k8sMessage._method[_data._item]"
                       },
                       _jqext:{
                         click:function(e){

@@ -81,10 +81,12 @@
 
 .bz-light::before{
   content:"\ea2e";
+  font-size:13px;
 }
 
 .bz-dark::before{
-  content:"\ea2d"
+  content:"\ea2d";
+  font-size:13px;
 }
 
 .bz-logo{
@@ -286,13 +288,13 @@ button.bz-folder-close{
 }
 .bz-delete:before{
   content:"\e9a8";
-  font-size:15px;
+  font-size:13px;
   font-stretch: expanded;
 }
 
 .bz-delete-pod:before{
   content:"\e9a8";
-  font-size:17px;
+  font-size:13px;
   font-stretch: expanded;
   position: relative;
 }
@@ -327,6 +329,7 @@ button.bz-folder-close{
 
 .bz-api:before{
   content:"\e95d";
+  font-size:13px;
 }
 
 .bz-play:before{

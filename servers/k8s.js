@@ -24,17 +24,22 @@ const k8s={
 
     _fun(settings)
   },
+  _logCmd:function(s){
+    console.log(s)
+  },
   saveConfig:function(c){
     console.log(c)
     settings=c
     fs.writeFileSync(settingFile,JSON.stringify(c,0,2))
   },
   getNamespaceList:function(_fun){
-    _exe("kubectl get namespace",_fun)
+    let s="kubectl get namespace"
+    k8s._logCmd(s)
+    _exe(s,_fun)
   },
   killProcess:function(k,_fun){
     let s=`ps aux | grep -P "${k}"`
-    console.log(s)
+    k8s._logCmd(s)
     _exe(s,function(v){
       if(v){
         console.log(v)
@@ -56,7 +61,7 @@ const k8s={
     console.log(d)
     k8s.killProcess("port-forward.+"+d.port,function(){
       let s=`${_getK8sCmdHeader(d)} port-forward ${d.serverName} ${d.port}`
-      console.log(s)
+      k8s._logCmd(s)
       s=s.split(" ")
       _monitor(s.shift(),s,_fun)
     })
@@ -66,6 +71,7 @@ const k8s={
         _size=0,_timer=0,_stop;
     k8s.killProcess(s,function(){
       s=`${_getK8sCmdHeader(d)} ${s}`
+      k8s._logCmd(s)
       s=s.split(" ")
       _monitorLog(s.shift(),s,_fun)
     })
@@ -122,7 +128,7 @@ const k8s={
   },
   getList:function(d,_fun){
     let s=`${_getK8sCmdHeader(d)} get ${d.type}`
-    console.log(s)
+    k8s._logCmd(s)
     _exe(s,_fun)
   },
   getPSList:function(d,_fun){
@@ -192,6 +198,7 @@ const k8s={
       n="download/"+n
     }
     let s=`${_getK8sCmdHeader(_data)} cp ${_data.serverName}:${_data.path} ${n}`
+    k8s._logCmd(s)
     _exe(s,_fun)
   },
   getFileList:function(_data,_fun){
@@ -222,13 +229,14 @@ const k8s={
   },
   deleteFile:function(d,_fun){
     let s=`${_getK8sCmdHeader(d)} exec -i ${d.serverName} -- rm ${d.folder?"-r":""} ${d.path}`
+    k8s._logCmd(s)
     s=s.split(" ")
     _monitor(s.shift(),s,_fun)
   },
   sweapFile:function(d,_fun){
     console.log("------- Sweap file:")
     let s=`${_getK8sCmdHeader(d)} exec -i ${d.serverName} -- truncate -s 0 ${d.path}`
-    console.log(s)
+    k8s._logCmd(s)
     s=s.split(" ")
     _monitor(s.shift(),s,_fun)
   },
@@ -278,6 +286,7 @@ const k8s={
   addFile:function(d,_fun){
     if(d.folder){
       let s=`${_getK8sCmdHeader(d)} exec -i ${d.serverName} -- mkdir ${d.path}`
+      k8s._logCmd(s)
       _exe(s,_fun)
     }else{
       k8s.saveFile(d,_fun)
@@ -285,11 +294,13 @@ const k8s={
   },
   removePod:function(d,_fun){
     let s=`${_getK8sCmdHeader(d)} delete pod ${d.serverName}`
+    k8s._logCmd(s)
     _exe(s,_fun)
   },
   saveFile:function(_data,_fun){
     fs.writeFileSync("tmp",(_data.content||""))
     let s=`${_getK8sCmdHeader(_data)} cp tmp ${_data.ns}/${_data.serverName}:${_data.path}`
+    k8s._logCmd(s)
     _exe(s,function(r){
       console.log("upload completed, going to delete tmp file")
       fs.rmSync("tmp")
@@ -299,17 +310,16 @@ const k8s={
   },
   searchFile:function(d,_fun){
     let s=`${_getK8sCmdHeader(d)} exec -i ${d.serverName} -- find ${d.path} -name ${d.file} -ls`
+    k8s._logCmd(s)
     s=s.split(" ")
     _monitor(s.shift(),s,_fun)
     // _exe(s,_fun)
   },
   logFile:function(_data,_fun){
     let s=`${_getK8sCmdHeader(_data)} logs -f ${_data.serverName}`
+    k8s._logCmd(s)
     s=s.split(" ")
     _monitor(s.shift(),s,_fun)
-  },
-  updateScaleConfig:function(_data){
-    let s=`${_getK8sCmdHeader(_data)} scale --${_data.name}=${_data.value} deployment/${_data.serverName}`
   },
   exeAPI:function(d,_fun){
     console.log(d)
@@ -404,14 +414,15 @@ const k8s={
   }
 }
 function _getK8sCmdHeader(_data){
-  // console.log(_data)
   return `kubectl -n ${_data.ns}`
 }
 function _buildRemoteK8sCmd(_data,_fun){
-  return `${_getK8sCmdHeader(_data)} exec -i ${_data.name} -- ${_data.cmd}`
+  let s= `${_getK8sCmdHeader(_data,1)} exec -i ${_data.name} -- ${_data.cmd}`
+  k8s._logCmd(s)
+  return s
 }
 function _exe(s,_fun){
-  // console.log(s)
+  // k8s._logCmd(s)
   // exec(s, (_error, b, _stderr) => {
   //   if(_error||_stderr){
   //     _error=_error||_stderr
