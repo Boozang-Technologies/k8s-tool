@@ -294,6 +294,10 @@ const k8s={
     function _insertData(_fun){
       let o=Object.values(k8s._data._curAlarms).find(x=>!x._config),v=""
       if(o&&o._resource&&o._resource[0]&&o._resource.find(x=>x._ready)){
+        if(!k8s._data._config.ns){
+          alert(_k8sMessage._info._missNamespace)
+          return _fun&&_fun()
+        }
         _k8sProxy._send({
           _data:{
             method:"exeCmd",
@@ -897,6 +901,10 @@ const k8s={
     })
   },
   _getPods:function(_fun,_noloading){
+    if(!k8s._data._config.ns){
+      alert(_k8sMessage._info._missNamespace)
+      return _fun&&_fun()
+    }
     clearTimeout(k8s._loadPodsTime)
     _k8sProxy._send({
       _noloading:_noloading,

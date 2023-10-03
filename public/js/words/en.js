@@ -41,7 +41,8 @@ const _k8sMessage={
     _missExePod:"There is not a pod to execute the task. Please forwarding a suitable pod first, and try again.",
     _confirmExe:"Please confirm to execute",
     _confirmDeleteNS:"Do you want to delete NameSpace",
-    _noteAddFavorites:"Note: Please expend pod file list and click ☆ to add your favorites."
+    _noteAddFavorites:"Note: Please expend pod file list and click ☆ to add your favorites.",
+    _missNamespace:"There is no namespace to execute the task. Please create a namespace first, and try again.",
   },
   _method:{
     _enterShell:"Get enter shell cmd",
