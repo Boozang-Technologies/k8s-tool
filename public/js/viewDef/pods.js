@@ -134,13 +134,6 @@ function _buildTreeNode(){
                           return c
                         }
                       },
-                      _items:[
-                        {
-                          _if:"_data._item=='add-folder'||_data._item=='add-file'",
-                          _tag:"span",
-                          _text:"＋"
-                        }
-                      ],
                       _jqext:{
                         click:function(e){
                           let d=this._data._supData._item
