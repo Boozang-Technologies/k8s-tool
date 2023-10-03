@@ -2413,9 +2413,11 @@ const k8s={
           },1000)
           return
         }
-        clearTimeout(k8s._errTimer)
         v=v.trim().split("\n").map(x=>x.split(/\s+/))
         v.shift()
+        if(v.length){
+          clearTimeout(k8s._errTimer)
+        }
         v=v.map(x=>{
           let n=x.pop()
           if(x[x.length-1]=="->"){
