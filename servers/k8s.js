@@ -25,7 +25,7 @@ const k8s={
     _fun(settings)
   },
   _logCmd:function(s){
-    console.log(s)
+    console.log("> "+s)
   },
   saveConfig:function(c){
     console.log(c)
