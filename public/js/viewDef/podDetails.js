@@ -48,7 +48,7 @@ const _podDetailsViewDef={
                     class:"bz-node-title"
                   },
                   _text:function(d){
-                    return d._item.p.replace("etc/..","")
+                    return d._item.p;//.replace("etc/..","")
                   },
                   _jqext:{
                     click:function(){

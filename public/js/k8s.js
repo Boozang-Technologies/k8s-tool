@@ -788,52 +788,52 @@ const k8s={
     d._open=1
     d._loading=0
   },
-  _searchFile:function(d){
-    _Util._promptMessage({
-      _msg:_k8sMessage._info._askSearchFile,
-      _fun:function(c,sv){
-        d._loading=1
-        d._subList=[]
-        let s=(d._pod||d)._name,p=d._path||"/"
-        _k8sProxy._send({
-          _data:{
-            method:"searchFile",
-            data:{
-              serverName:s,
-              path:p.replace("etc/../","")||"/",
-              file:sv
-            }
-          },
-          _success:function(v){
-            v=v.trim().split("\n").map(x=>x.trim().split(/\s+/))
-            v=v.filter(x=>x.length>=11)
-            v=v.map(x=>{
-              x.shift()
-              x.shift()
-              let n=x.pop()
-              if(x[x.length-1]=="->"){
-                x.pop()
-                n=x.pop()
-              }
-              return {
-                _name:n,
-                _date:([x.pop(),x.pop(),x.pop()]).reverse().join(" "),
-                _size:x.pop(),
-                _folder:x[0][0]=="d",
-                _chmod:x[0],
-                _pod:d._pod||d,
-                _path:n
-              }
-            })
-            d._subList.push(...v)
-            k8s._orderFileList(d)
-            c._ctrl._close()
-          }
-        })
-      }
-    })
+  // _searchFile:function(d){
+  //   _Util._promptMessage({
+  //     _msg:_k8sMessage._info._askSearchFile,
+  //     _fun:function(c,sv){
+  //       d._loading=1
+  //       d._subList=[]
+  //       let s=(d._pod||d)._name,p=d._path||"/"
+  //       _k8sProxy._send({
+  //         _data:{
+  //           method:"searchFile",
+  //           data:{
+  //             serverName:s,
+  //             path:p.replace("etc/../","")||"/",
+  //             file:sv
+  //           }
+  //         },
+  //         _success:function(v){
+  //           v=v.trim().split("\n").map(x=>x.trim().split(/\s+/))
+  //           v=v.filter(x=>x.length>=11)
+  //           v=v.map(x=>{
+  //             x.shift()
+  //             x.shift()
+  //             let n=x.pop()
+  //             if(x[x.length-1]=="->"){
+  //               x.pop()
+  //               n=x.pop()
+  //             }
+  //             return {
+  //               _name:n,
+  //               _date:([x.pop(),x.pop(),x.pop()]).reverse().join(" "),
+  //               _size:x.pop(),
+  //               _folder:x[0][0]=="d",
+  //               _chmod:x[0],
+  //               _pod:d._pod||d,
+  //               _path:n
+  //             }
+  //           })
+  //           d._subList.push(...v)
+  //           k8s._orderFileList(d)
+  //           c._ctrl._close()
+  //         }
+  //       })
+  //     }
+  //   })
 
-  },
+  // },
   _getServiceByPod:function(d){
     return k8s._data._serviceList.find(x=>(d._name||d).includes(x._name))
   },
@@ -924,7 +924,8 @@ const k8s={
             _ready:x[1][0]!="0",
             _status:x[2],
             _age:x.pop(),
-            _path:"etc/.."
+            // _path:"etc/.."
+            _path:"/"
           }
         })
         if(!k8s._data._podList){
@@ -2324,14 +2325,15 @@ const k8s={
             }else{
               g.push(n)
             }
-            n._name=n._name.replace("etc/../","")
+            // n._name=n._name.replace("etc/../","")
           }
         })
         
         Object.keys(gs).map(k=>{
           gs[k].forEach(x=>x._path=k+"/"+x._path)
           let o={
-            _name:k.replace("etc/../",""),
+            // _name:k.replace("etc/../",""),
+            _name:k,
             _date:"xxx",
             _size:"xxx",
             _folder:1,

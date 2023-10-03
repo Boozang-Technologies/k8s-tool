@@ -142,7 +142,8 @@ function _buildTreeNode(){
                               e.stopPropagation()
                               debugger
                               e=this.parentElement.parentElement.children[0].children[1].children[0]
-                              _Util._copyText(this._data._supData._item._path.replace("etc/../",""),document,e)
+                              // _Util._copyText(this._data._supData._item._path.replace("etc/../",""),document,e);
+                              _Util._copyText(this._data._supData._item._path,document,e)
                               return
                             case "download":
                               return k8s._download(d._pod,d)
@@ -150,8 +151,8 @@ function _buildTreeNode(){
                               return k8s._setStar(d)
                             case "filter":
                               return d._showFilter=1
-                            case "search":
-                              return k8s._searchFile(d)
+                            // case "search":
+                            //   return k8s._searchFile(d)
                             case "refresh":
                               d._subList=0
                               d._open=0
@@ -418,13 +419,14 @@ const _listViewDef={
                               return k8s._forward(d)
                             case "filter":
                               return d._showFilter=1
-                            case "search":
-                              return k8s._searchFile(d)
+                            // case "search":
+                            //   return k8s._searchFile(d)
                             case "refresh":
                               d._subList=0
                               d._open=1
                               d._loading=1
-                              d._path="etc/.."
+                              // d._path="etc/.."
+                              d._path="/"
                               return k8s._getFileList(d,d)
                             case "delete-pod":
                               return k8s._removePod(d)
