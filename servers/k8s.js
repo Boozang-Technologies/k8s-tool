@@ -69,6 +69,9 @@ const k8s={
   getLog:function(d,_fun){
     let s=`logs -f --tail=100 ${d.serverName}`,
         _size=0,_timer=0,_stop;
+    
+    k8s._logCmd(s);
+
     k8s.killProcess(s,function(){
       s=`${_getK8sCmdHeader(d)} ${s}`
       k8s._logCmd(s)
