@@ -52,9 +52,9 @@ Follow these steps:
 1. Create a `k8s-tool` application folder to hold your `k8s-tool` configuration
 2. Go to directory
 3. Download executable for your operating system
-    - Windows: https://github.com/Boozang-Technologies/k8s-tool/raw/main/dist/k8s-tool-win.exe
-    - MacOS https://github.com/Boozang-Technologies/k8s-tool/raw/main/dist/k8s-tool-macos
-    - Linux: https://github.com/Boozang-Technologies/k8s-tool/raw/main/dist/k8s-tool-linux
+    - Windows: https://github.com/Boozang-Technologies/artifacts/blob/main/k8s-tool/k8s-tool-win.exe
+    - MacOS https://github.com/Boozang-Technologies/artifacts/blob/main/k8s-tool/k8s-tool-macos
+    - Linux: https://github.com/Boozang-Technologies/artifacts/blob/main/k8s-tool/k8s-tool-linux
 4. Run the executable from shell or by double-clicking it 
 5. Open your browser and navigate to `http://localhost:8866` to access the tool's web interface
 
