@@ -881,6 +881,7 @@ const k8s={
         }
 
         _logHandler._data._setting=v.log||{}
+        _logHandler._data._setting.highlights=_logHandler._data._setting.highlights||[]
         setTimeout(()=>{
           _CtrlDriver._refreshData(k8s._data._config,"ns")
         },500)

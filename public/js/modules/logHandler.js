@@ -285,40 +285,50 @@ const _logHandler={
     }catch(ex){}
 
     function _formatJSON(v){
-      if(k8s._data._config.log.formatJSON){
-        let j=v.match(/{.+}/)
-        if(j){
-          let ov=v
-          j=j[0]
-          v=v.split(j)
-          try{
-            j=JSON.parse(j)
-          }catch(ex){
-            j=j.replace(/""/g,'"')
-            j=j.split('}",')
-            if(j.length>1){
-              j=j[0]+"}"
-            }
+      let ov=v
+      try{
+        if(k8s._data._config.log.formatJSON){
+          let j=v.match(/{.+}/)
+          if(j){
+            let ov=v
+            j=j[0]
+            v=v.split(j)
             try{
               j=JSON.parse(j)
-            }catch(ee){
-              return ov
+            }catch(ex){
+              j=j.replace(/""/g,'"')
+              j=j.split('}",')
+              if(j.length>1){
+                j=j[0]+"}"
+              }
+              try{
+                j=JSON.parse(j)
+              }catch(ee){
+                return ov
+              }
             }
+            v=v[0]+"\n"+JSON.stringify(j,0,2)+"\n"+v[1]
           }
-          v=v[0]+"\n"+JSON.stringify(j,0,2)+"\n"+v[1]
         }
+        return v
+      }catch(ex){
+        return ov
       }
-      return v
     }
 
     function _formatXML(v){
+      let ov=v
       if(k8s._data._config.log.formatXML){
-        let j=v.match(/<[^>]+><.+><[^>]+>/)
-        if(j){
-          j=j[0]
-          v=v.split(j)
-          j=_Util._formatMiniXML(j)
-          v=v[0]+"\n"+j+"\n"+v[1]
+        try{
+          let j=v.match(/<[^>]+><.+><[^>]+>/)
+          if(j){
+            j=j[0]
+            v=v.split(j)
+            j=_Util._formatMiniXML(j)
+            v=v[0]+"\n"+j+"\n"+v[1]
+          }
+        }catch(ex){
+          return ov
         }
       }
       return v
@@ -327,7 +337,7 @@ const _logHandler={
     function _highlight(v){
       v=v.replace(/</g,"&lt;").replace(/>/g,"&gt;")
       let w="",_match
-      _logHandler._data._setting.highlights.forEach(x=>{
+      (_logHandler._data._setting.highlights||[]).forEach(x=>{
         if(!x.enable){
           return
         }
