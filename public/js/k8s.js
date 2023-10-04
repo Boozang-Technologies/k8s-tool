@@ -1,7 +1,7 @@
 //Machine learn
 const k8s={
   _uiSwitch:_CtrlDriver._buildProxy({_curMainTab:"_pods"}),
-  _data:_CtrlDriver._buildProxy({_highlightCount:0,_curCtrl:0,_config:{stars:[],autoForward:{},filter:{},alarms:{}}}),
+  _data:_CtrlDriver._buildProxy({_highlightCount:0,_curCtrl:0,_config:{stars:[],autoForward:{},filter:{},alarms:{},log:{}}}),
   _getKey:function(){
     k8s._key=k8s._key||Date.now()
     return k8s._key++
