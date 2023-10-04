@@ -25,7 +25,7 @@
   "pkg": {
     "scripts":["public/**/*.js","server/*.js"],
     "assets":["public/*.html","public/css/*.css","public/font/*","node_modules/socket.io/client-dist/*.js"],
-    "outputPath": "dist"
+    "outputPath": "../artifacts/k8s-tool"
   },
   "dependencies": {
     "mkdirp": "^1.0.4",
