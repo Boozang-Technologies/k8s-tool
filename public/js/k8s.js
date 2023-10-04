@@ -2388,7 +2388,9 @@ const k8s={
           }
         },
         _success:function(v){
-          _logHandler._addLog(v,p._name,p._log)
+          if(p._log){
+            _logHandler._addLog(v,p._name,p._log)
+          }
         }
       })
     }
