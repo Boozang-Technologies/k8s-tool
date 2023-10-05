@@ -10,8 +10,9 @@ if(!fs.existsSync(settingFile)){
   console.log("Creating settings file: " + settingFile)
   fs.writeFileSync(settingFile,"{}")
 }
-if(!fs.existsSync("download")){
-  fs.mkdirSync("download")
+global.downloadFolder=process.cwd()+"/download/";
+if(!fs.existsSync(downloadFolder)){
+  fs.mkdirSync(downloadFolder)
 }
 const k8s={
   getConfig:function(d,_fun){
@@ -144,10 +145,7 @@ const k8s={
   downloadFolder:function(d,_fun){
     let f=d.path.split("/")
     f=f.pop()||f.pop()
-    f="download/"+f
-    if(!fs.existsSync("download")){
-      fs.mkdirSync("download")
-    }
+    f=downloadFolder+f
     if(fs.existsSync(f)){
       fs.rmdirSync(f)
     }
@@ -198,10 +196,8 @@ const k8s={
     if(_data.localFolder){
       n=_data.localFolder+"/"+n
     }else{
-      if(!fs.existsSync("download")){
-        fs.mkdirSync("download")
-      }
-      n="download/"+n
+      
+      n=downloadFolder+n
     }
     let s=`${_getK8sCmdHeader(_data)} cp ${_data.serverName}:${_data.path} ${n}`
     k8s._logCmd(s)
@@ -347,7 +343,7 @@ const k8s={
   exeCmd:function(d,_fun){
     // console.log(d)
     if(d.fileName){
-      fs.writeFileSync("download/"+d.fileName,d.fileContent||"");
+      fs.writeFileSync(downloadFolder+d.fileName,d.fileContent||"");
     }
 
     let cs=d.cmd.split("\n")
