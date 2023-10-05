@@ -10,6 +10,9 @@ if(!fs.existsSync(settingFile)){
   console.log("Creating settings file: " + settingFile)
   fs.writeFileSync(settingFile,"{}")
 }
+if(!fs.existsSync("download")){
+  fs.mkdirSync("download")
+}
 const k8s={
   getConfig:function(d,_fun){
     if(!settings){
