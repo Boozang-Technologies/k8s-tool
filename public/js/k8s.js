@@ -902,10 +902,11 @@ const k8s={
     })
   },
   _getPods:function(_fun,_noloading){
-    if(!k8s._data._config.ns){
+    if(!k8s._data._config.ns&&!(k8s._data._namespaceList||[])[0]){
       alert(_k8sMessage._info._missNamespace)
       return _fun&&_fun()
     }
+    k8s._data._config.ns=k8s._data._config.ns||k8s._data._namespaceList[0]
     clearTimeout(k8s._loadPodsTime)
     _k8sProxy._send({
       _noloading:_noloading,
